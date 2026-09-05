@@ -1,63 +1,65 @@
-<svg width="1140" height="280" viewBox="0 0 1140 280" xmlns="http://www.w3.org/2000/svg">
+<svg width="1140" height="250" viewBox="0 0 1140 250" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a0033;stop-opacity:0.6" />
-      <stop offset="100%" style="stop-color:#0a0015;stop-opacity:0.6" />
+    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.25"/>
     </linearGradient>
-    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#7a00ff;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#00f0ff;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#7a00ff;stop-opacity:1" />
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d1f3c"/>
+      <stop offset="100%" stop-color="#0a1628"/>
     </linearGradient>
-    <pattern id="dotGrid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="10" cy="10" r="0.8" fill="#7a00ff" opacity="0.15"/>
-    </pattern>
-    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
-      <line x1="0" y1="0" x2="4" y2="0" stroke="#ffffff" stroke-width="1" opacity="0.04"/>
+    <pattern id="aboutDots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="0.4" fill="#3b82f6" opacity="0.06"/>
     </pattern>
   </defs>
-  
-  <rect width="1140" height="280" fill="#0a0015" rx="12"/>
-  <rect width="1140" height="280" fill="url(#dotGrid)" rx="12"/>
-  <rect x="2" y="2" width="1136" height="276" fill="url(#cardBg)" rx="10"/>
-  <rect width="1140" height="280" fill="url(#scanlines)" rx="12" pointer-events="none"/>
-  
-  <rect x="0" y="0" width="1140" height="280" fill="none" stroke="url(#borderGrad)" stroke-width="2" rx="12" opacity="0.8">
-    <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+
+  <!-- Card background -->
+  <rect width="1140" height="250" fill="url(#cardBg)" rx="12"/>
+  <rect width="1140" height="250" fill="url(#aboutDots)" rx="12"/>
+  <rect x="1" y="1" width="1138" height="248" fill="none" stroke="url(#cardBorder)" stroke-width="1.5" rx="11">
+    <animate attributeName="stroke-opacity" values="0.4;0.7;0.4" dur="5s" repeatCount="indefinite"/>
   </rect>
-  
-  <text x="567" y="80" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#ff003c" text-anchor="middle" opacity="0.8">
-    <animate attributeName="x" values="567; 565; 567; 575; 567" dur="3s" keyTimes="0; 0.1; 0.15; 0.2; 1" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0; 0.8; 0; 0.8; 0" dur="3s" keyTimes="0; 0.1; 0.15; 0.2; 1" repeatCount="indefinite"/>
-    About Me
-  </text>
-  <text x="573" y="80" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#00f0ff" text-anchor="middle" opacity="0.8">
-    <animate attributeName="x" values="573; 575; 573; 565; 573" dur="3.1s" keyTimes="0; 0.15; 0.2; 0.25; 1" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0; 0.8; 0; 0.8; 0" dur="3.1s" keyTimes="0; 0.15; 0.2; 0.25; 1" repeatCount="indefinite"/>
-    About Me
-  </text>
-  <text x="570" y="80" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#ffffff" text-anchor="middle">
-    About Me
-  </text>
-  
-  <line x1="470" y1="95" x2="670" y2="95" stroke="url(#borderGrad)" stroke-width="2" opacity="0.6"/>
-  
-  <text x="570" y="140" font-family="Arial, sans-serif" font-size="18" fill="#e0e0e0" text-anchor="middle">
-    Passionate about building impactful and useful software that solves real problems.
-  </text>
-  
-  <text x="570" y="175" font-family="Arial, sans-serif" font-size="18" fill="#e0e0e0" text-anchor="middle">
-    Strong interest in AI and emerging technologies with a curious builder mindset.
-  </text>
-  
-  <text x="570" y="210" font-family="Arial, sans-serif" font-size="18" fill="#e0e0e0" text-anchor="middle">
-    Love learning modern tech stacks and exploring innovative solutions.
-  </text>
-  
-  <circle cx="100" cy="140" r="4" fill="#7a00ff" opacity="0.6">
-    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="1040" cy="140" r="4" fill="#00f0ff" opacity="0.6">
-    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3.5s" repeatCount="indefinite"/>
-  </circle>
+
+  <!-- Code brackets icon -->
+  <text x="570" y="45" font-family="'Courier New', 'Consolas', monospace" font-size="24" fill="#3b82f6" text-anchor="middle" font-weight="bold" opacity="0.9">&lt; / &gt;</text>
+
+  <!-- Main tagline -->
+  <text x="570" y="95" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="bold" text-anchor="middle" fill="#ffffff">Building. <tspan fill="#3b82f6">Learning.</tspan> Shipping.</text>
+
+  <!-- Subtitle -->
+  <text x="570" y="125" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#94a3b8" text-anchor="middle" letter-spacing="1">Open Source &amp; Coding Journey</text>
+
+  <!-- Tech badges — Row 1 -->
+  <!-- 5 badges × 100px + 4 gaps × 12px = 548px, start x = (1140-548)/2 = 296 -->
+
+  <rect x="296" y="155" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="346" y="174" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="500">Java</text>
+
+  <rect x="408" y="155" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="458" y="174" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="500">Python</text>
+
+  <rect x="520" y="155" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="570" y="174" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="500">React</text>
+
+  <rect x="632" y="155" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="682" y="174" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="500">Next.js</text>
+
+  <rect x="744" y="155" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="794" y="174" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle" font-weight="500">Spring Boot</text>
+
+  <!-- Tech badges — Row 2 -->
+  <rect x="296" y="193" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="346" y="212" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="500">FastAPI</text>
+
+  <rect x="408" y="193" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="458" y="212" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="500">AWS</text>
+
+  <rect x="520" y="193" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="570" y="212" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="500">Docker</text>
+
+  <rect x="632" y="193" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="682" y="212" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="500">Kafka</text>
+
+  <rect x="744" y="193" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="794" y="212" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="500">Git</text>
 </svg>

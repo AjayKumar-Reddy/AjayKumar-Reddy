@@ -1,18 +1,18 @@
 <svg width="1200" height="80" viewBox="0 0 1200 80" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="connectGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#2563eb"/>
       <stop offset="100%" stop-color="#60a5fa"/>
     </linearGradient>
-    <linearGradient id="underlineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="connectLine" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#3b82f6" stop-opacity="0"/>
       <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.5"/>
       <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
     </linearGradient>
   </defs>
 
-  <text x="600" y="42" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="bold" fill="url(#titleGrad)" text-anchor="middle" letter-spacing="2">GitHub Analytics</text>
-  <rect x="350" y="56" width="500" height="1.5" fill="url(#underlineGrad)">
+  <text x="600" y="42" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="bold" fill="url(#connectGrad)" text-anchor="middle" letter-spacing="2">Let's Connect</text>
+  <rect x="380" y="56" width="440" height="1.5" fill="url(#connectLine)">
     <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
   </rect>
 </svg>

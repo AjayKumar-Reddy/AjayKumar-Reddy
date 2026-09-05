@@ -1,56 +1,53 @@
 <div align="center">
 
-<img src="./assets/header.svg" width="100%" alt="Header">
+<img src="./assets/header.svg" width="100%" alt="Ajay Kumar S — Aspiring Software Engineer">
 
 </div>
 
 <div align="center">
-<img src="./assets/about-card.svg" width="95%" alt="About Me">
-</div>
-
-<br>
-
-<div align="center">
-<img src="./assets/tech-section-header.svg" width="80%" alt="Tech Stack">
-</div>
-
-<div align="center">
-<img src="./assets/tech-grid.svg" width="95%" alt="Tech Grid">
+<img src="./assets/about-card.svg" width="95%" alt="Building. Learning. Shipping. — Open Source & Coding Journey">
 </div>
 
 <br>
 
 <div align="center">
-<img src="./assets/ai-divider.svg" width="90%" alt="AI Focus">
+<img src="./assets/tech-grid.svg" width="95%" alt="Technology Stack">
 </div>
 
 <br>
 
 <div align="center">
-  <img src="./assets/stats-banner.svg" width="95%" alt="GitHub Analytics Banner">
-  
-  <br>
+<img src="./assets/projects-card.svg" width="95%" alt="Featured Projects">
+</div>
 
-  <!--
-  <img src="https://github-readme-stats.vercel.app/api?username=ajaykumarreddy7411-cmd&show_icons=true&theme=radical&bg_color=0a0015&title_color=7a00ff&text_color=ffffff&icon_color=00f0ff&border_color=7a00ff&border_radius=10" alt="Ajay's GitHub Stats" /> 
-  
-  <br><br>-->
+<br>
 
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=AjayKumar-Reddy&theme=radical&background=0a0015&ring=7a00ff&fire=00f0ff&currStreakLabel=ffffff&border=7a00ff&stroke=7a00ff&currStreakNum=00f0ff&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&border_radius=10" alt="Ajay's GitHub Streak" />
+<div align="center">
+  <img src="./assets/stats-banner.svg" width="80%" alt="GitHub Analytics">
+
+  <br><br>
+
+  <img src="https://github-readme-stats.vercel.app/api?username=AjayKumar-Reddy&show_icons=true&bg_color=0a1628&title_color=3b82f6&text_color=e2e8f0&icon_color=60a5fa&border_color=1e3a5f&border_radius=10&hide_border=false" alt="Ajay's GitHub Stats" />
+
+  <br><br>
+
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=AjayKumar-Reddy&background=0a1628&ring=3b82f6&fire=60a5fa&currStreakLabel=e2e8f0&border=1e3a5f&stroke=3b82f6&currStreakNum=60a5fa&sideNums=e2e8f0&sideLabels=94a3b8&dates=64748b&border_radius=10" alt="Ajay's GitHub Streak" />
 
 </div>
 
 <br><br>
 
 <div align="center">
-<img src="./assets/contact-header.svg" width="70%" alt="Connect">
+<img src="./assets/connect-header.svg" width="70%" alt="Let's Connect">
 </div>
 
-<div align="center">
-<a href="https://fun-ai-portfolio.vercel.app" target="_blank">
-  <img src="./assets/contact-card.svg" width="90%" alt="Contact">
-</a>
-</div>
+<p align="center">
+  <a href="mailto:akumar23755@gmail.com"><img src="https://img.shields.io/badge/Email-akumar23755%40gmail.com-0a1628?style=for-the-badge&logo=gmail&logoColor=60a5fa&labelColor=0d1f3c&color=1e3a5f" alt="Email"/></a>
+  &nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/ajay-kumar-reddy7411/"><img src="https://img.shields.io/badge/LinkedIn-Ajay_Kumar-0a1628?style=for-the-badge&logo=linkedin&logoColor=60a5fa&labelColor=0d1f3c&color=1e3a5f" alt="LinkedIn"/></a>
+  &nbsp;&nbsp;
+  <a href="https://fun-ai-portfolio.vercel.app"><img src="https://img.shields.io/badge/Portfolio-Visit_Site-0a1628?style=for-the-badge&logo=vercel&logoColor=60a5fa&labelColor=0d1f3c&color=1e3a5f" alt="Portfolio"/></a>
+</p>
 
 <br>
 

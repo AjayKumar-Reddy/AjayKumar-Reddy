@@ -1,0 +1,82 @@
+<svg width="1140" height="285" viewBox="0 0 1140 285" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="projTitleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="projLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="topAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Section header -->
+  <text x="570" y="30" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="bold" fill="url(#projTitleGrad)" text-anchor="middle" letter-spacing="1">Featured Projects</text>
+  <rect x="420" y="42" width="300" height="1.5" fill="url(#projLineGrad)"/>
+
+  <!-- ═══ Project 1: MSR Insight ═══ -->
+  <g transform="translate(20, 62)">
+    <rect width="340" height="200" rx="10" fill="#0d1f3c" stroke="#1e3a5f" stroke-width="1">
+      <animate attributeName="stroke-opacity" values="0.4;0.7;0.4" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Top accent bar -->
+    <rect x="14" y="1" width="312" height="3" rx="1.5" fill="url(#topAccent)" opacity="0.8"/>
+    <!-- Number badge -->
+    <circle cx="30" cy="35" r="12" fill="#3b82f6" opacity="0.1" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="30" y="39" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#3b82f6" text-anchor="middle" font-weight="bold">01</text>
+    <!-- Project name -->
+    <text x="52" y="39" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#ffffff" font-weight="bold">MSR Insight</text>
+    <!-- Subtitle -->
+    <text x="24" y="62" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#94a3b8" font-style="italic">Analytics &amp; Reporting Platform</text>
+    <!-- Divider -->
+    <line x1="24" y1="74" x2="130" y2="74" stroke="#1e3a5f" stroke-width="0.8"/>
+    <!-- Tech stack -->
+    <text x="24" y="96" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#60a5fa">Next.js  ·  Express  ·  FastAPI</text>
+    <text x="24" y="115" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#60a5fa">PostgreSQL  ·  Redis  ·  RabbitMQ</text>
+    <text x="24" y="134" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#60a5fa">LangChain  ·  Jest</text>
+    <!-- Description -->
+    <text x="24" y="160" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#64748b">Multi-service platform with RAG-powered</text>
+    <text x="24" y="174" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#64748b">conversational analytics &amp; async pipelines</text>
+  </g>
+
+  <!-- ═══ Project 2: Job Portal ═══ -->
+  <g transform="translate(400, 62)">
+    <rect width="340" height="200" rx="10" fill="#0d1f3c" stroke="#1e3a5f" stroke-width="1">
+      <animate attributeName="stroke-opacity" values="0.4;0.7;0.4" dur="4.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="14" y="1" width="312" height="3" rx="1.5" fill="url(#topAccent)" opacity="0.8"/>
+    <circle cx="30" cy="35" r="12" fill="#60a5fa" opacity="0.1" stroke="#60a5fa" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="30" y="39" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#60a5fa" text-anchor="middle" font-weight="bold">02</text>
+    <text x="52" y="39" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#ffffff" font-weight="bold">Job Portal</text>
+    <text x="24" y="62" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#94a3b8" font-style="italic">Microservices Recruitment Platform</text>
+    <line x1="24" y1="74" x2="130" y2="74" stroke="#1e3a5f" stroke-width="0.8"/>
+    <text x="24" y="96" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#60a5fa">Spring Boot  ·  Spring Cloud</text>
+    <text x="24" y="115" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#60a5fa">Apache Kafka  ·  Redis  ·  Docker</text>
+    <text x="24" y="134" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#60a5fa">MySQL  ·  Next.js  ·  Spring AI</text>
+    <text x="24" y="160" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#64748b">Event-driven architecture with AI-powered</text>
+    <text x="24" y="174" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#64748b">recruitment features &amp; shared modules</text>
+  </g>
+
+  <!-- ═══ Project 3: GetMeaChai ═══ -->
+  <g transform="translate(780, 62)">
+    <rect width="340" height="200" rx="10" fill="#0d1f3c" stroke="#1e3a5f" stroke-width="1">
+      <animate attributeName="stroke-opacity" values="0.4;0.7;0.4" dur="5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="14" y="1" width="312" height="3" rx="1.5" fill="url(#topAccent)" opacity="0.8"/>
+    <circle cx="30" cy="35" r="12" fill="#3b82f6" opacity="0.1" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="30" y="39" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#3b82f6" text-anchor="middle" font-weight="bold">03</text>
+    <text x="52" y="39" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#ffffff" font-weight="bold">GetMeaChai</text>
+    <text x="24" y="62" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#94a3b8" font-style="italic">Crowdfunding SaaS Platform</text>
+    <line x1="24" y1="74" x2="130" y2="74" stroke="#1e3a5f" stroke-width="0.8"/>
+    <text x="24" y="96" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#60a5fa">Next.js 15  ·  NextAuth.js</text>
+    <text x="24" y="115" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#60a5fa">MongoDB  ·  Razorpay</text>
+    <text x="24" y="134" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#60a5fa">Server Actions  ·  Vercel</text>
+    <text x="24" y="160" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#64748b">Secure payment workflows with HMAC</text>
+    <text x="24" y="174" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#64748b">verification &amp; AES-256-GCM encryption</text>
+  </g>
+</svg>
