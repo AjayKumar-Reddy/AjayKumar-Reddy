@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-<img src="./assets/about-card.svg" width="95%" alt="Ajay Kumar S — Engineering Terminal &amp; HUD">
+<img src="./assets/about-card.svg" width="95%" alt="Ajay Kumar S — Engineering Terminal &amp; Cyber Robot Unit">
 </div>
 
 <br>
@@ -23,7 +23,7 @@
 <br>
 
 <div align="center">
-  <img src="./assets/stats-banner.svg" width="80%" alt="GitHub Telemetry &amp; Analytics">
+  <img src="./assets/stats-banner.svg" width="85%" alt="GitHub Telemetry &amp; Analytics">
 
   <br><br>
 
@@ -38,7 +38,7 @@
 <br><br>
 
 <div align="center">
-<img src="./assets/connect-header.svg" width="70%" alt="Connect &amp; Collaborate">
+<img src="./assets/connect-header.svg" width="75%" alt="Connect &amp; Collaborate">
 </div>
 
 <br>

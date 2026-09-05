@@ -1,199 +1,257 @@
-<svg width="1140" height="340" viewBox="0 0 1140 340" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="450" viewBox="0 0 1000 450" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Steady Dark Background Gradient -->
+    <!-- Dark Background Gradient -->
     <linearGradient id="termBg" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#0b172a"/>
       <stop offset="100%" stop-color="#070f1e"/>
     </linearGradient>
 
-    <!-- Steady Solid Progress Bar Gradient -->
-    <linearGradient id="solidBarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1d4ed8"/>
-      <stop offset="60%" stop-color="#2563eb"/>
-      <stop offset="100%" stop-color="#38bdf8"/>
+    <!-- Hologram Ray Gradient -->
+    <linearGradient id="holoRay" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
     </linearGradient>
 
-    <pattern id="termGrid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="10" cy="10" r="0.5" fill="#3b82f6" opacity="0.06"/>
+    <pattern id="termGrid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="11" cy="11" r="0.6" fill="#3b82f6" opacity="0.08"/>
     </pattern>
 
-    <filter id="termGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+    <filter id="robotGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
   </defs>
 
   <!-- Base Card -->
-  <rect width="1140" height="340" rx="14" fill="url(#termBg)"/>
-  <rect width="1140" height="340" rx="14" fill="url(#termGrid)"/>
+  <rect width="1000" height="450" rx="14" fill="url(#termBg)"/>
+  <rect width="1000" height="450" rx="14" fill="url(#termGrid)"/>
 
-  <!-- Border -->
-  <rect x="1" y="1" width="1138" height="338" rx="13" fill="none" stroke="#1e3a5f" stroke-width="1.2"/>
+  <!-- Outer Border -->
+  <rect x="1" y="1" width="998" height="448" rx="13" fill="none" stroke="#1e3a5f" stroke-width="1.2"/>
 
   <!-- Top Terminal Title Bar -->
-  <rect x="1" y="1" width="1138" height="38" rx="13" fill="#0f1f38" opacity="0.9"/>
-  <line x1="1" y1="39" x2="1139" y2="39" stroke="#1e3a5f" stroke-width="1"/>
+  <rect x="1" y="1" width="998" height="42" rx="13" fill="#0f1f38" opacity="0.95"/>
+  <line x1="1" y1="43" x2="999" y2="43" stroke="#1e3a5f" stroke-width="1"/>
 
   <!-- macOS Window Controls -->
-  <circle cx="24" cy="20" r="5.5" fill="#ef4444" opacity="0.85"/>
-  <circle cx="42" cy="20" r="5.5" fill="#f59e0b" opacity="0.85"/>
-  <circle cx="60" cy="20" r="5.5" fill="#10b981" opacity="0.85"/>
+  <circle cx="26" cy="22" r="6" fill="#ef4444" opacity="0.9"/>
+  <circle cx="46" cy="22" r="6" fill="#f59e0b" opacity="0.9"/>
+  <circle cx="66" cy="22" r="6" fill="#10b981" opacity="0.9"/>
 
-  <!-- Terminal Session Title -->
-  <text x="570" y="24" font-family="'Courier New', 'Consolas', monospace" font-size="12" fill="#94a3b8" text-anchor="middle" font-weight="600">
+  <!-- Terminal Session Title (Large 13.5px font) -->
+  <text x="500" y="27" font-family="'Courier New', 'Consolas', monospace" font-size="13.5" fill="#94a3b8" text-anchor="middle" font-weight="700">
     ajay@cloud-cluster: ~/core-engineering-profile.json (zsh)
   </text>
 
   <!-- Right Status Badge in Window Bar -->
-  <g transform="translate(1030, 20)">
-    <circle cx="-10" cy="0" r="3.5" fill="#10b981">
+  <g transform="translate(930, 22)">
+    <circle cx="-10" cy="0" r="4" fill="#10b981">
       <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>
     </circle>
-    <text x="0" y="3.5" font-family="'Segoe UI', sans-serif" font-size="10" fill="#34d399" font-weight="700" letter-spacing="1">ONLINE</text>
+    <text x="2" y="4" font-family="'Segoe UI', sans-serif" font-size="11" fill="#34d399" font-weight="800" letter-spacing="1">ONLINE</text>
   </g>
 
-  <!-- ════════════ LEFT COLUMN: DEVELOPER CLI SPECIFICATION (Width: 530) ════════════ -->
-  <g transform="translate(24, 56)">
+  <!-- ════════════ LEFT COLUMN: DEVELOPER CLI SPECIFICATION (Width: 462, Height: 374) ════════════ -->
+  <g transform="translate(22, 56)">
     <!-- Code Editor Box -->
-    <rect width="530" height="262" rx="8" fill="#081326" stroke="#1a2d4c" stroke-width="1"/>
+    <rect width="462" height="372" rx="10" fill="#081326" stroke="#1a2d4c" stroke-width="1.2"/>
 
     <!-- Left Accent Bar -->
-    <rect x="0" y="10" width="3" height="242" rx="1.5" fill="#3b82f6" opacity="0.8"/>
+    <rect x="0" y="12" width="3.5" height="348" rx="1.5" fill="#3b82f6" opacity="0.85"/>
 
     <!-- Active CRT Scanner Laser Beam Sweeping Vertically -->
-    <line x1="4" y1="0" x2="526" y2="0" stroke="#38bdf8" stroke-width="1" opacity="0.35" filter="url(#termGlow)">
-      <animate attributeName="y1" values="10;250;10" dur="6s" repeatCount="indefinite"/>
-      <animate attributeName="y2" values="10;250;10" dur="6s" repeatCount="indefinite"/>
+    <line x1="4" y1="0" x2="458" y2="0" stroke="#38bdf8" stroke-width="1.5" opacity="0.4" filter="url(#robotGlow)">
+      <animate attributeName="y1" values="12;360;12" dur="5.5s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="12;360;12" dur="5.5s" repeatCount="indefinite"/>
     </line>
 
-    <!-- Line Numbers & Code Lines using inline tspans -->
-    <g font-family="'Courier New', 'Consolas', monospace" font-size="12">
+    <!-- Line Numbers & Code Lines (Large 15px font size, line height 38px) -->
+    <g font-family="'Courier New', 'Consolas', monospace" font-size="15" font-weight="600">
       <!-- Line 1 -->
-      <text x="18" y="30" fill="#475569">01</text>
-      <text x="48" y="30"><tspan fill="#f43f5e">const </tspan><tspan fill="#60a5fa">softwareEngineer </tspan><tspan fill="#e2e8f0">= {</tspan></text>
+      <text x="18" y="38" fill="#475569">01</text>
+      <text x="50" y="38"><tspan fill="#f43f5e">const </tspan><tspan fill="#60a5fa">softwareEngineer </tspan><tspan fill="#e2e8f0">= {</tspan></text>
 
       <!-- Line 2 -->
-      <text x="18" y="58" fill="#475569">02</text>
-      <text x="56" y="58"><tspan fill="#93c5fd">name: </tspan><tspan fill="#86efac">"Ajay Kumar S"</tspan><tspan fill="#e2e8f0">,</tspan></text>
+      <text x="18" y="76" fill="#475569">02</text>
+      <text x="58" y="76"><tspan fill="#93c5fd">name: </tspan><tspan fill="#86efac">"Ajay Kumar S"</tspan><tspan fill="#e2e8f0">,</tspan></text>
 
       <!-- Line 3 -->
-      <text x="18" y="86" fill="#475569">03</text>
-      <text x="56" y="86"><tspan fill="#93c5fd">institution: </tspan><tspan fill="#86efac">"MSRIT Bangalore"</tspan><tspan fill="#e2e8f0">,</tspan></text>
+      <text x="18" y="114" fill="#475569">03</text>
+      <text x="58" y="114"><tspan fill="#93c5fd">institution: </tspan><tspan fill="#86efac">"MSRIT Bangalore"</tspan><tspan fill="#e2e8f0">,</tspan></text>
 
       <!-- Line 4 -->
-      <text x="18" y="114" fill="#475569">04</text>
-      <text x="56" y="114"><tspan fill="#93c5fd">academics: </tspan><tspan fill="#86efac">"B.Tech ISE (9.32) | Dip. (9.94)"</tspan><tspan fill="#e2e8f0">,</tspan></text>
+      <text x="18" y="152" fill="#475569">04</text>
+      <text x="58" y="152"><tspan fill="#93c5fd">degree: </tspan><tspan fill="#86efac">"B.Tech ISE (9.32 CGPA)"</tspan><tspan fill="#e2e8f0">,</tspan></text>
 
       <!-- Line 5 -->
-      <text x="18" y="142" fill="#475569">05</text>
-      <text x="56" y="142"><tspan fill="#93c5fd">dsa_mastery: </tspan><tspan fill="#fbcfe8">"400+ Problems in Java"</tspan><tspan fill="#e2e8f0">,</tspan></text>
+      <text x="18" y="190" fill="#475569">05</text>
+      <text x="58" y="190"><tspan fill="#93c5fd">specialization: </tspan><tspan fill="#fbcfe8">"Distributed Systems"</tspan><tspan fill="#e2e8f0">,</tspan></text>
 
       <!-- Line 6 -->
-      <text x="18" y="170" fill="#475569">06</text>
-      <text x="56" y="170"><tspan fill="#93c5fd">architecture: </tspan><tspan fill="#86efac">["Distributed", "Kafka", "Cloud"]</tspan><tspan fill="#e2e8f0">,</tspan></text>
+      <text x="18" y="228" fill="#475569">06</text>
+      <text x="58" y="228"><tspan fill="#93c5fd">architecture: </tspan><tspan fill="#86efac">["Distributed", "Kafka"]</tspan><tspan fill="#e2e8f0">,</tspan></text>
 
       <!-- Line 7 -->
-      <text x="18" y="198" fill="#475569">07</text>
-      <text x="56" y="198"><tspan fill="#93c5fd">mission: </tspan><tspan fill="#fde047">"Building high-scale resilient systems"</tspan></text>
+      <text x="18" y="266" fill="#475569">07</text>
+      <text x="58" y="266"><tspan fill="#93c5fd">mission: </tspan><tspan fill="#fde047">"High-scale systems"</tspan></text>
 
       <!-- Line 8 -->
-      <text x="18" y="226" fill="#475569">08</text>
-      <text x="48" y="226" fill="#e2e8f0">};</text>
+      <text x="18" y="304" fill="#475569">08</text>
+      <text x="50" y="304" fill="#e2e8f0">};</text>
       <!-- Blinking Terminal Prompt -->
-      <text x="75" y="226" fill="#38bdf8">&gt; _
+      <text x="78" y="304" fill="#38bdf8">&gt; _
         <animate attributeName="opacity" values="0;1;0" dur="0.9s" repeatCount="indefinite"/>
       </text>
     </g>
 
-    <!-- Bottom Language Tags in Left Box -->
-    <g transform="translate(18, 238)">
-      <rect x="0" y="0" width="70" height="16" rx="3" fill="#1e293b"/>
-      <text x="35" y="12" font-family="'Courier New', monospace" font-size="9" fill="#94a3b8" text-anchor="middle">JSON/TS</text>
+    <!-- Bottom Language Tags in Left Box (Large 11.5px font) -->
+    <g transform="translate(18, 332)">
+      <rect x="0" y="0" width="84" height="24" rx="4" fill="#1e293b"/>
+      <text x="42" y="16.5" font-family="'Courier New', monospace" font-size="11.5" fill="#94a3b8" text-anchor="middle" font-weight="600">JSON/TS</text>
 
-      <rect x="76" y="0" width="70" height="16" rx="3" fill="#1e293b"/>
-      <text x="111" y="12" font-family="'Courier New', monospace" font-size="9" fill="#94a3b8" text-anchor="middle">UTF-8</text>
+      <rect x="94" y="0" width="84" height="24" rx="4" fill="#1e293b"/>
+      <text x="136" y="16.5" font-family="'Courier New', monospace" font-size="11.5" fill="#94a3b8" text-anchor="middle" font-weight="600">UTF-8</text>
 
-      <rect x="152" y="0" width="85" height="16" rx="3" fill="#1e293b"/>
-      <text x="194.5" y="12" font-family="'Courier New', monospace" font-size="9" fill="#60a5fa" text-anchor="middle">branch: main</text>
+      <rect x="188" y="0" width="118" height="24" rx="4" fill="#1e293b"/>
+      <text x="247" y="16.5" font-family="'Courier New', monospace" font-size="11.5" fill="#60a5fa" text-anchor="middle" font-weight="600">branch: main</text>
     </g>
   </g>
 
-  <!-- ════════════ RIGHT COLUMN: SYSTEMS & ARCHITECTURE GAUGES (Width: 538) ════════════ -->
-  <g transform="translate(578, 56)">
+  <!-- ════════════ RIGHT COLUMN: CYBERNETIC AI ROBOT DEVELOPER (Width: 472, Height: 372) ════════════ -->
+  <g transform="translate(506, 56)">
     <!-- Container Box -->
-    <rect width="538" height="262" rx="8" fill="#081326" stroke="#1a2d4c" stroke-width="1"/>
+    <rect width="472" height="372" rx="10" fill="#081326" stroke="#1a2d4c" stroke-width="1.2"/>
 
-    <!-- Section Header -->
-    <text x="24" y="28" font-family="'Segoe UI', sans-serif" font-size="11" fill="#60a5fa" font-weight="700" letter-spacing="2">
-      ENGINEERING HUD &amp; COMPETENCIES
+    <!-- Section Header (Large 13px font) -->
+    <text x="24" y="30" font-family="'Segoe UI', sans-serif" font-size="13" fill="#60a5fa" font-weight="800" letter-spacing="2">
+      AUTONOMOUS AI AGENT &amp; DEV UNIT
     </text>
-    <!-- Live Telemetry Equalizer Blip on Header Line -->
-    <line x1="24" y1="36" x2="514" y2="36" stroke="#1e3a5f" stroke-width="0.8"/>
+    <line x1="24" y1="40" x2="448" y2="40" stroke="#1e3a5f" stroke-width="1"/>
 
-    <!-- Gauge 1: Microservices & Event-Driven (Kafka / RabbitMQ) -->
-    <g transform="translate(24, 48)">
-      <text x="0" y="14" font-family="'Segoe UI', sans-serif" font-size="12" fill="#e2e8f0" font-weight="600">Distributed Microservices &amp; Event Streaming</text>
-      <text x="490" y="14" font-family="'Courier New', monospace" font-size="11.5" fill="#38bdf8" text-anchor="end" font-weight="bold">94%</text>
-      <!-- Track -->
-      <rect x="0" y="22" width="490" height="8" rx="4" fill="#0f1f38"/>
-      <!-- Fill -->
-      <rect x="0" y="22" width="460" height="8" rx="4" fill="url(#solidBarGrad)"/>
-      <!-- Photon Energy Pulse Moving Along Conduit -->
-      <circle cy="26" r="3.5" fill="#67e8f9" filter="url(#termGlow)">
-        <animate attributeName="cx" values="10;455;10" dur="3s" repeatCount="indefinite"/>
+    <!-- Holographic Projection Beam from Base -->
+    <polygon points="236,270 140,80 332,80" fill="url(#holoRay)" opacity="0.35"/>
+
+    <!-- Ambient Floating Tech Data Bits -->
+    <g fill="#38bdf8" opacity="0.5">
+      <circle cx="180" cy="140" r="2">
+        <animate attributeName="cy" values="180;90;180" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.2;0.9;0.2" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="292" cy="160" r="1.8">
+        <animate attributeName="cy" values="200;100;200" dur="5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.1;0.8;0.1" dur="5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="236" cy="90" r="2.2">
+        <animate attributeName="cy" values="110;55;110" dur="3.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="3.5s" repeatCount="indefinite"/>
       </circle>
     </g>
 
-    <!-- Gauge 2: Core Backend (Spring Boot, FastAPI, Express) -->
-    <g transform="translate(24, 92)">
-      <text x="0" y="14" font-family="'Segoe UI', sans-serif" font-size="12" fill="#e2e8f0" font-weight="600">Core Backend (Spring Boot, FastAPI, Express)</text>
-      <text x="490" y="14" font-family="'Courier New', monospace" font-size="11.5" fill="#60a5fa" text-anchor="end" font-weight="bold">92%</text>
-      <rect x="0" y="22" width="490" height="8" rx="4" fill="#0f1f38"/>
-      <rect x="0" y="22" width="450" height="8" rx="4" fill="url(#solidBarGrad)"/>
-      <circle cy="26" r="3.5" fill="#67e8f9" filter="url(#termGlow)">
-        <animate attributeName="cx" values="10;445;10" dur="3.5s" repeatCount="indefinite"/>
+    <!-- ═══ THE CYBERNETIC AI ROBOT (Center at x=236, y=175) ═══ -->
+    <g transform="translate(236, 175)">
+      <!-- Pulsing Orbital Cyber Ring -->
+      <ellipse cx="0" cy="42" rx="68" ry="20" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="5,5" opacity="0.45">
+        <animateTransform attributeName="transform" type="rotate" from="0 0 42" to="360 0 42" dur="10s" repeatCount="indefinite"/>
+      </ellipse>
+
+      <!-- Robot Torso / Chassis -->
+      <path d="M-30,15 L30,15 L25,54 L-25,54 Z" fill="#0d2342" stroke="#2563eb" stroke-width="1.8"/>
+
+      <!-- Glowing Arc Reactor Core (Breathing Pulse) -->
+      <circle cx="0" cy="34" r="9" fill="#0284c7" stroke="#38bdf8" stroke-width="1.8">
+        <animate attributeName="r" values="7.5;10.5;7.5" dur="2s" repeatCount="indefinite"/>
       </circle>
+      <circle cx="0" cy="34" r="4.5" fill="#ffffff" filter="url(#robotGlow)">
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Cyber Neck -->
+      <rect x="-8" y="2" width="16" height="13" rx="2" fill="#1e3a5f"/>
+
+      <!-- Robot Head -->
+      <rect x="-32" y="-44" width="64" height="46" rx="12" fill="#0f294d" stroke="#38bdf8" stroke-width="1.8"/>
+
+      <!-- Antenna Ears -->
+      <rect x="-37" y="-30" width="5" height="18" rx="2" fill="#2563eb"/>
+      <rect x="32" y="-30" width="5" height="18" rx="2" fill="#2563eb"/>
+      <!-- Antenna Top Signal -->
+      <line x1="0" y1="-44" x2="0" y2="-54" stroke="#38bdf8" stroke-width="2"/>
+      <circle cx="0" cy="-55" r="3.5" fill="#38bdf8" filter="url(#robotGlow)">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Glowing Cyber Visor Eyes (Animated Horizontal Laser Scanner) -->
+      <rect x="-22" y="-30" width="44" height="15" rx="6" fill="#07172b" stroke="#1d4ed8" stroke-width="1.2"/>
+      <rect x="-20" y="-28" width="40" height="11" rx="4" fill="#0369a1"/>
+      <!-- Visor Scan Beam -->
+      <line y1="-23" y2="-23" stroke="#ffffff" stroke-width="3" stroke-linecap="round" filter="url(#robotGlow)">
+        <animate attributeName="x1" values="-18;10;-18" dur="1.8s" repeatCount="indefinite"/>
+        <animate attributeName="x2" values="-10;18;-10" dur="1.8s" repeatCount="indefinite"/>
+      </line>
+
+      <!-- Mechanical Arms Typing / Gesture Interface -->
+      <!-- Left Arm -->
+      <path d="M-28,22 L-48,38 L-34,52" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="-34" cy="52" r="4" fill="#38bdf8"/>
+      <!-- Right Arm -->
+      <path d="M28,22 L48,38 L34,52" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="34" cy="52" r="4" fill="#38bdf8"/>
     </g>
 
-    <!-- Gauge 3: Full Stack & Modern Web (Next.js 15, React, Tailwind) -->
-    <g transform="translate(24, 136)">
-      <text x="0" y="14" font-family="'Segoe UI', sans-serif" font-size="12" fill="#e2e8f0" font-weight="600">Full Stack &amp; Modern Web (Next.js 15, React, Tailwind)</text>
-      <text x="490" y="14" font-family="'Courier New', monospace" font-size="11.5" fill="#38bdf8" text-anchor="end" font-weight="bold">90%</text>
-      <rect x="0" y="22" width="490" height="8" rx="4" fill="#0f1f38"/>
-      <rect x="0" y="22" width="440" height="8" rx="4" fill="url(#solidBarGrad)"/>
-      <circle cy="26" r="3.5" fill="#67e8f9" filter="url(#termGlow)">
-        <animate attributeName="cx" values="10;435;10" dur="2.8s" repeatCount="indefinite"/>
-      </circle>
+    <!-- ═══ FLOATING HOLOGRAPHIC SOFTWARE NODES (Large 13px - 14px bold fonts) ═══ -->
+    <!-- Node 1: AI / RAG Pipeline (Top Left) -->
+    <g transform="translate(80, 105)">
+      <animateTransform attributeName="transform" type="translate" values="80 105; 80 97; 80 105" dur="3s" repeatCount="indefinite"/>
+      <rect x="-55" y="-18" width="110" height="36" rx="8" fill="#081e3a" stroke="#38bdf8" stroke-width="1.2" opacity="0.95"/>
+      <circle cx="-38" cy="0" r="4" fill="#38bdf8"/>
+      <text x="-26" y="5" font-family="'Segoe UI', sans-serif" font-size="13.5" fill="#f1f5f9" font-weight="800">AI / RAG</text>
+      <!-- Connection Wire to Robot -->
+      <line x1="55" y1="5" x2="135" y2="45" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
     </g>
 
-    <!-- Gauge 4: Cloud, Containers & AI (AWS, GCP, Docker, LangChain) -->
-    <g transform="translate(24, 180)">
-      <text x="0" y="14" font-family="'Segoe UI', sans-serif" font-size="12" fill="#e2e8f0" font-weight="600">Cloud, Containers &amp; GenAI (Docker, AWS, LangChain)</text>
-      <text x="490" y="14" font-family="'Courier New', monospace" font-size="11.5" fill="#60a5fa" text-anchor="end" font-weight="bold">86%</text>
-      <rect x="0" y="22" width="490" height="8" rx="4" fill="#0f1f38"/>
-      <rect x="0" y="22" width="420" height="8" rx="4" fill="url(#solidBarGrad)"/>
-      <circle cy="26" r="3.5" fill="#67e8f9" filter="url(#termGlow)">
-        <animate attributeName="cx" values="10;415;10" dur="3.2s" repeatCount="indefinite"/>
-      </circle>
+    <!-- Node 2: Spring Boot & Kafka (Top Right) -->
+    <g transform="translate(390, 105)">
+      <animateTransform attributeName="transform" type="translate" values="390 105; 390 113; 390 105" dur="3.5s" repeatCount="indefinite"/>
+      <rect x="-64" y="-18" width="128" height="36" rx="8" fill="#081e3a" stroke="#60a5fa" stroke-width="1.2" opacity="0.95"/>
+      <circle cx="-48" cy="0" r="4" fill="#60a5fa"/>
+      <text x="-36" y="5" font-family="'Segoe UI', sans-serif" font-size="13" fill="#f1f5f9" font-weight="800">SPRING/KAFKA</text>
+      <line x1="-64" y1="5" x2="-135" y2="45" stroke="#60a5fa" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
     </g>
 
-    <!-- Bottom Activity Metric Badges -->
-    <g transform="translate(24, 226)">
-      <!-- Badge 1 -->
-      <rect x="0" y="0" width="115" height="26" rx="5" fill="#0d1f3c" stroke="#1e3a5f" stroke-width="0.8"/>
-      <text x="57.5" y="16.5" font-family="'Segoe UI', sans-serif" font-size="10.5" fill="#cbd5e1" text-anchor="middle" font-weight="600">⚡ 400+ DSA Java</text>
+    <!-- Node 3: Python / FastAPI (Middle Left) -->
+    <g transform="translate(74, 190)">
+      <animateTransform attributeName="transform" type="translate" values="74 190; 74 198; 74 190" dur="4s" repeatCount="indefinite"/>
+      <rect x="-56" y="-17" width="112" height="34" rx="8" fill="#081e3a" stroke="#38bdf8" stroke-width="1.2" opacity="0.95"/>
+      <text x="0" y="5" font-family="'Segoe UI', sans-serif" font-size="13" fill="#93c5fd" font-weight="700" text-anchor="middle">🐍 FASTAPI/AI</text>
+    </g>
 
-      <!-- Badge 2 -->
-      <rect x="125" y="0" width="115" height="26" rx="5" fill="#0d1f3c" stroke="#1e3a5f" stroke-width="0.8"/>
-      <text x="182.5" y="16.5" font-family="'Segoe UI', sans-serif" font-size="10.5" fill="#cbd5e1" text-anchor="middle" font-weight="600">🛡️ High Scale</text>
+    <!-- Node 4: Docker & Cloud (Middle Right) -->
+    <g transform="translate(395, 190)">
+      <animateTransform attributeName="transform" type="translate" values="395 190; 395 182; 395 190" dur="3.8s" repeatCount="indefinite"/>
+      <rect x="-58" y="-17" width="116" height="34" rx="8" fill="#081e3a" stroke="#60a5fa" stroke-width="1.2" opacity="0.95"/>
+      <text x="0" y="5" font-family="'Segoe UI', sans-serif" font-size="13" fill="#93c5fd" font-weight="700" text-anchor="middle">🐳 DOCKER/AWS</text>
+    </g>
 
-      <!-- Badge 3 -->
-      <rect x="250" y="0" width="115" height="26" rx="5" fill="#0d1f3c" stroke="#1e3a5f" stroke-width="0.8"/>
-      <text x="307.5" y="16.5" font-family="'Segoe UI', sans-serif" font-size="10.5" fill="#cbd5e1" text-anchor="middle" font-weight="600">🚀 Microservices</text>
+    <!-- ═══ BOTTOM HUD TELEMETRY CHIPS (Large 12.5px font) ═══ -->
+    <g transform="translate(18, 324)">
+      <!-- Chip 1 -->
+      <rect x="0" y="0" width="102" height="32" rx="6" fill="#061224" stroke="#1e3a5f" stroke-width="1"/>
+      <circle cx="14" cy="16" r="3.5" fill="#10b981">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="26" y="20.5" font-family="'Courier New', monospace" font-size="12" fill="#34d399" font-weight="700">ONLINE</text>
 
-      <!-- Badge 4 -->
-      <rect x="375" y="0" width="115" height="26" rx="5" fill="#0d1f3c" stroke="#1e3a5f" stroke-width="0.8"/>
-      <text x="432.5" y="16.5" font-family="'Segoe UI', sans-serif" font-size="10.5" fill="#38bdf8" text-anchor="middle" font-weight="600">🧠 GenAI RAG</text>
+      <!-- Chip 2 -->
+      <rect x="110" y="0" width="102" height="32" rx="6" fill="#061224" stroke="#1e3a5f" stroke-width="1"/>
+      <text x="161" y="20.5" font-family="'Courier New', monospace" font-size="12" fill="#cbd5e1" text-anchor="middle" font-weight="700">P99: &lt;45ms</text>
+
+      <!-- Chip 3 -->
+      <rect x="220" y="0" width="106" height="32" rx="6" fill="#061224" stroke="#1e3a5f" stroke-width="1"/>
+      <text x="273" y="20.5" font-family="'Courier New', monospace" font-size="12" fill="#cbd5e1" text-anchor="middle" font-weight="700">ASYNC I/O</text>
+
+      <!-- Chip 4 -->
+      <rect x="334" y="0" width="102" height="32" rx="6" fill="#061224" stroke="#1e3a5f" stroke-width="1"/>
+      <text x="385" y="20.5" font-family="'Courier New', monospace" font-size="12" fill="#38bdf8" text-anchor="middle" font-weight="700">AGENTIC</text>
     </g>
   </g>
 </svg>

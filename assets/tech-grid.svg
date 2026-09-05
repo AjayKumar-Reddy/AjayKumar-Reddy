@@ -1,14 +1,20 @@
-<svg width="1140" height="430" viewBox="0 0 1140 430" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="490" viewBox="0 0 1000 490" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- Steady Solid Underline Gradient -->
     <linearGradient id="techLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#3b82f6" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.85"/>
       <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
     </linearGradient>
 
-    <pattern id="gridDot" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="10" cy="10" r="0.4" fill="#3b82f6" opacity="0.07"/>
+    <!-- Card Background -->
+    <linearGradient id="techCardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c1a33"/>
+      <stop offset="100%" stop-color="#071020"/>
+    </linearGradient>
+
+    <pattern id="gridDot" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="11" cy="11" r="0.5" fill="#3b82f6" opacity="0.08"/>
     </pattern>
 
     <filter id="techGlow" x="-20%" y="-20%" width="140%" height="140%">
@@ -17,328 +23,314 @@
     </filter>
   </defs>
 
-  <text x="570" y="32" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="800" text-anchor="middle" letter-spacing="2">
-    <tspan fill="#60a5fa">TECHNICAL </tspan><tspan fill="#38bdf8">PROFICIENCIES &amp; TOOLKIT</tspan>
+  <!-- Section Title (Large 32px Font) -->
+  <text x="500" y="34" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif" font-size="32" font-weight="900" text-anchor="middle" letter-spacing="2">
+    <tspan fill="#60a5fa">TECHNICAL </tspan><tspan fill="#38bdf8">EXPERTISE &amp; TOOLKIT</tspan>
   </text>
-  <rect x="400" y="44" width="340" height="2" fill="url(#techLineGrad)"/>
+  <rect x="330" y="46" width="340" height="2" fill="url(#techLineGrad)"/>
 
-  <!-- ════════════ Card 1: LANGUAGES ════════════ -->
-  <g transform="translate(20, 65)">
-    <rect width="340" height="160" rx="10" fill="#0c1930" stroke="#1e3a5f" stroke-width="1"/>
-    <rect width="340" height="160" rx="10" fill="url(#gridDot)"/>
-    <rect x="1" y="14" width="3.5" height="132" rx="1.5" fill="#3b82f6"/>
+  <!-- ════════════ PANEL 1: BACKEND & DISTRIBUTED SYSTEMS (x:24, y:68) ════════════ -->
+  <g transform="translate(24, 68)">
+    <rect width="468" height="196" rx="12" fill="url(#techCardBg)"/>
+    <rect width="468" height="196" rx="12" fill="url(#gridDot)"/>
+    <rect x="1" y="1" width="466" height="194" rx="11" fill="none" stroke="#1d4ed8" stroke-width="1.2"/>
 
     <!-- Top Laser Runner (Real Motion) -->
-    <line y1="1" y2="1" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" filter="url(#techGlow)">
-      <animate attributeName="x1" values="-60;340" dur="3s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="0;400" dur="3s" repeatCount="indefinite"/>
+    <line y1="1" y2="1" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" filter="url(#techGlow)">
+      <animate attributeName="x1" values="-80;468" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;548" dur="3s" repeatCount="indefinite"/>
     </line>
 
-    <!-- Floating Micro Particle -->
-    <circle cx="280" cy="120" r="1.5" fill="#38bdf8">
-      <animate attributeName="cy" values="140;40;140" dur="6s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.1;0.7;0.1" dur="6s" repeatCount="indefinite"/>
-    </circle>
+    <!-- Header Row -->
+    <g transform="translate(20, 18)">
+      <circle cx="6" cy="7" r="4" fill="#38bdf8">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="6" cy="7" r="8" fill="none" stroke="#38bdf8" stroke-width="0.8">
+        <animate attributeName="r" values="4;11;4" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="20" y="11" font-family="'Segoe UI', sans-serif" font-size="13.5" fill="#60a5fa" letter-spacing="1.5" font-weight="800">BACKEND &amp; DISTRIBUTED</text>
 
-    <!-- Radar Beacon -->
-    <circle cx="28" cy="28" r="3.5" fill="#38bdf8">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="28" cy="28" r="7" fill="none" stroke="#38bdf8" stroke-width="0.8">
-      <animate attributeName="r" values="3.5;10;3.5" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite"/>
-    </circle>
+      <!-- Status Pill -->
+      <rect x="312" y="-3" width="116" height="22" rx="11" fill="#0f2847" stroke="#1e3a5f" stroke-width="0.8"/>
+      <circle cx="324" cy="8" r="3" fill="#10b981">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/>
+      </circle>
+      <text x="333" y="11.5" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#34d399" font-weight="800" letter-spacing="0.5">MICROSERVICES</text>
+    </g>
+    <line x1="20" y1="46" x2="448" y2="46" stroke="#1e3a5f" stroke-width="1"/>
 
-    <text x="42" y="32" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#60a5fa" letter-spacing="2.5" font-weight="700">CORE LANGUAGES</text>
-    <line x1="24" y1="42" x2="316" y2="42" stroke="#1e3a5f" stroke-width="0.8"/>
+    <!-- Row 1 Pills -->
+    <g transform="translate(20, 56)">
+      <!-- Spring Boot -->
+      <rect x="0" y="0" width="134" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#38bdf8"/>
+      <text x="28" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">Spring Boot</text>
 
-    <!-- Pill 1: Java -->
-    <rect x="20" y="52" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="20" y="56" width="2.5" height="36" rx="1" fill="#38bdf8"/>
-    <text x="32" y="70" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">Java</text>
-    <text x="32" y="85" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#60a5fa">Core, OOP, 400+ DSA</text>
+      <!-- FastAPI -->
+      <rect x="144" y="0" width="118" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="160" cy="18" r="4" fill="#38bdf8"/>
+      <text x="172" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">FastAPI</text>
 
-    <!-- Pill 2: Python -->
-    <rect x="176" y="52" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="176" y="56" width="2.5" height="36" rx="1" fill="#38bdf8"/>
-    <text x="188" y="70" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">Python</text>
-    <text x="188" y="85" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#60a5fa">FastAPI &amp; AI Scripting</text>
+      <!-- Node / Express -->
+      <rect x="272" y="0" width="156" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="288" cy="18" r="4" fill="#38bdf8"/>
+      <text x="300" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">Node / Express</text>
+    </g>
 
-    <!-- Pill 3: JavaScript -->
-    <rect x="20" y="104" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="20" y="108" width="2.5" height="36" rx="1" fill="#38bdf8"/>
-    <text x="32" y="122" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">JavaScript</text>
-    <text x="32" y="137" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#60a5fa">ES6+, Async, Node.js</text>
+    <!-- Row 2 Pills -->
+    <g transform="translate(20, 100)">
+      <!-- Microservices -->
+      <rect x="0" y="0" width="144" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#60a5fa"/>
+      <text x="28" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">Microservices</text>
 
-    <!-- Pill 4: C -->
-    <rect x="176" y="104" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="176" y="108" width="2.5" height="36" rx="1" fill="#38bdf8"/>
-    <text x="188" y="122" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">C</text>
-    <text x="188" y="137" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#60a5fa">Systems &amp; Memory</text>
+      <!-- RESTful APIs -->
+      <rect x="154" y="0" width="132" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="170" cy="18" r="4" fill="#60a5fa"/>
+      <text x="182" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">RESTful APIs</text>
+
+      <!-- System Design -->
+      <rect x="296" y="0" width="132" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="312" cy="18" r="4" fill="#60a5fa"/>
+      <text x="324" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">System Design</text>
+    </g>
+
+    <!-- Bottom Feature Bar -->
+    <g transform="translate(20, 148)">
+      <rect width="428" height="32" rx="6" fill="#060e1c" stroke="#162b47" stroke-width="0.8"/>
+      <text x="214" y="20.5" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">
+        ⚡ <tspan fill="#38bdf8" font-weight="600">Architectures:</tspan> Decoupled services, asynchronous queues &amp; robust APIs
+      </text>
+    </g>
   </g>
 
-  <!-- ════════════ Card 2: FRONTEND ════════════ -->
-  <g transform="translate(400, 65)">
-    <rect width="340" height="160" rx="10" fill="#0c1930" stroke="#1e3a5f" stroke-width="1"/>
-    <rect width="340" height="160" rx="10" fill="url(#gridDot)"/>
-    <rect x="1" y="14" width="3.5" height="132" rx="1.5" fill="#0ea5e9"/>
+  <!-- ════════════ PANEL 2: PROGRAMMING LANGUAGES (x:508, y:68) ════════════ -->
+  <g transform="translate(508, 68)">
+    <rect width="468" height="196" rx="12" fill="url(#techCardBg)"/>
+    <rect width="468" height="196" rx="12" fill="url(#gridDot)"/>
+    <rect x="1" y="1" width="466" height="194" rx="11" fill="none" stroke="#2563eb" stroke-width="1.2"/>
 
     <!-- Top Laser Runner -->
-    <line y1="1" y2="1" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" filter="url(#techGlow)">
-      <animate attributeName="x1" values="-60;340" dur="3.4s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="0;400" dur="3.4s" repeatCount="indefinite"/>
+    <line y1="1" y2="1" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" filter="url(#techGlow)">
+      <animate attributeName="x1" values="-80;468" dur="3.4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;548" dur="3.4s" repeatCount="indefinite"/>
     </line>
 
-    <circle cx="280" cy="120" r="1.5" fill="#06b6d4">
-      <animate attributeName="cy" values="140;40;140" dur="6.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.1;0.7;0.1" dur="6.5s" repeatCount="indefinite"/>
-    </circle>
+    <!-- Header Row -->
+    <g transform="translate(20, 18)">
+      <circle cx="6" cy="7" r="4" fill="#60a5fa">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="6" cy="7" r="8" fill="none" stroke="#60a5fa" stroke-width="0.8">
+        <animate attributeName="r" values="4;11;4" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="20" y="11" font-family="'Segoe UI', sans-serif" font-size="13.5" fill="#60a5fa" letter-spacing="1.5" font-weight="800">LANGUAGES &amp; RUNTIMES</text>
 
-    <circle cx="28" cy="28" r="3.5" fill="#06b6d4">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="28" cy="28" r="7" fill="none" stroke="#06b6d4" stroke-width="0.8">
-      <animate attributeName="r" values="3.5;10;3.5" dur="2.2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.8;0;0.8" dur="2.2s" repeatCount="indefinite"/>
-    </circle>
+      <rect x="330" y="-3" width="98" height="22" rx="11" fill="#0f2847" stroke="#1e3a5f" stroke-width="0.8"/>
+      <circle cx="342" cy="8" r="3" fill="#10b981">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="352" y="11.5" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#34d399" font-weight="800" letter-spacing="0.5">POLYGLOT</text>
+    </g>
+    <line x1="20" y1="46" x2="448" y2="46" stroke="#1e3a5f" stroke-width="1"/>
 
-    <text x="42" y="32" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#38bdf8" letter-spacing="2.5" font-weight="700">FRONTEND ARCHITECTURE</text>
-    <line x1="24" y1="42" x2="316" y2="42" stroke="#1e3a5f" stroke-width="0.8"/>
+    <!-- Row 1 Pills -->
+    <g transform="translate(20, 56)">
+      <!-- Java -->
+      <rect x="0" y="0" width="128" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#60a5fa"/>
+      <text x="28" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">Java (Core/OOP)</text>
 
-    <!-- Pill 1: React.js -->
-    <rect x="20" y="52" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="20" y="56" width="2.5" height="36" rx="1" fill="#06b6d4"/>
-    <text x="32" y="70" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">React.js</text>
-    <text x="32" y="85" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#38bdf8">Hooks, Context &amp; SPA</text>
+      <!-- Python -->
+      <rect x="138" y="0" width="134" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="154" cy="18" r="4" fill="#60a5fa"/>
+      <text x="166" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">Python</text>
 
-    <!-- Pill 2: Next.js 15 -->
-    <rect x="176" y="52" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="176" y="56" width="2.5" height="36" rx="1" fill="#06b6d4"/>
-    <text x="188" y="70" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">Next.js 15</text>
-    <text x="188" y="85" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#38bdf8">App Router &amp; SSR</text>
+      <!-- JavaScript -->
+      <rect x="282" y="0" width="146" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="298" cy="18" r="4" fill="#60a5fa"/>
+      <text x="310" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">JavaScript</text>
+    </g>
 
-    <!-- Pill 3: Tailwind CSS -->
-    <rect x="20" y="104" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="20" y="108" width="2.5" height="36" rx="1" fill="#06b6d4"/>
-    <text x="32" y="122" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">Tailwind CSS</text>
-    <text x="32" y="137" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#38bdf8">Responsive UI Design</text>
+    <!-- Row 2 Pills -->
+    <g transform="translate(20, 100)">
+      <!-- TypeScript -->
+      <rect x="0" y="0" width="134" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#38bdf8"/>
+      <text x="28" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">TypeScript</text>
 
-    <!-- Pill 4: HTML5 / CSS3 -->
-    <rect x="176" y="104" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="176" y="108" width="2.5" height="36" rx="1" fill="#06b6d4"/>
-    <text x="188" y="122" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">HTML5 &amp; CSS3</text>
-    <text x="188" y="137" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#38bdf8">Semantic &amp; Modern</text>
+      <!-- C Language -->
+      <rect x="144" y="0" width="134" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="160" cy="18" r="4" fill="#38bdf8"/>
+      <text x="172" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">C Language</text>
+
+      <!-- SQL -->
+      <rect x="288" y="0" width="140" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="304" cy="18" r="4" fill="#38bdf8"/>
+      <text x="316" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">SQL &amp; Schemas</text>
+    </g>
+
+    <!-- Bottom Feature Bar -->
+    <g transform="translate(20, 148)">
+      <rect width="428" height="32" rx="6" fill="#060e1c" stroke="#162b47" stroke-width="0.8"/>
+      <text x="214" y="20.5" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">
+        ⚡ <tspan fill="#60a5fa" font-weight="600">Core Foundations:</tspan> Clean code design, concurrency &amp; async patterns
+      </text>
+    </g>
   </g>
 
-  <!-- ════════════ Card 3: BACKEND ════════════ -->
-  <g transform="translate(780, 65)">
-    <rect width="340" height="160" rx="10" fill="#0c1930" stroke="#1e3a5f" stroke-width="1"/>
-    <rect width="340" height="160" rx="10" fill="url(#gridDot)"/>
-    <rect x="1" y="14" width="3.5" height="132" rx="1.5" fill="#3b82f6"/>
+  <!-- ════════════ PANEL 3: EVENT STREAMING & STORAGE (x:24, y:278) ════════════ -->
+  <g transform="translate(24, 278)">
+    <rect width="468" height="196" rx="12" fill="url(#techCardBg)"/>
+    <rect width="468" height="196" rx="12" fill="url(#gridDot)"/>
+    <rect x="1" y="1" width="466" height="194" rx="11" fill="none" stroke="#0284c7" stroke-width="1.2"/>
 
     <!-- Top Laser Runner -->
-    <line y1="1" y2="1" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" filter="url(#techGlow)">
-      <animate attributeName="x1" values="-60;340" dur="2.8s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="0;400" dur="2.8s" repeatCount="indefinite"/>
+    <line y1="1" y2="1" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" filter="url(#techGlow)">
+      <animate attributeName="x1" values="-80;468" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;548" dur="2.8s" repeatCount="indefinite"/>
     </line>
 
-    <circle cx="280" cy="120" r="1.5" fill="#38bdf8">
-      <animate attributeName="cy" values="140;40;140" dur="5.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.1;0.7;0.1" dur="5.5s" repeatCount="indefinite"/>
-    </circle>
+    <!-- Header Row -->
+    <g transform="translate(20, 18)">
+      <circle cx="6" cy="7" r="4" fill="#38bdf8">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="6" cy="7" r="8" fill="none" stroke="#38bdf8" stroke-width="0.8">
+        <animate attributeName="r" values="4;11;4" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="20" y="11" font-family="'Segoe UI', sans-serif" font-size="13.5" fill="#60a5fa" letter-spacing="1.5" font-weight="800">STREAMING, QUEUES &amp; DATA</text>
 
-    <circle cx="28" cy="28" r="3.5" fill="#38bdf8">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="28" cy="28" r="7" fill="none" stroke="#38bdf8" stroke-width="0.8">
-      <animate attributeName="r" values="3.5;10;3.5" dur="2.4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.8;0;0.8" dur="2.4s" repeatCount="indefinite"/>
-    </circle>
+      <rect x="320" y="-3" width="108" height="22" rx="11" fill="#0f2847" stroke="#1e3a5f" stroke-width="0.8"/>
+      <circle cx="332" cy="8" r="3" fill="#10b981">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="1.7s" repeatCount="indefinite"/>
+      </circle>
+      <text x="342" y="11.5" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#34d399" font-weight="800" letter-spacing="0.5">REAL-TIME</text>
+    </g>
+    <line x1="20" y1="46" x2="448" y2="46" stroke="#1e3a5f" stroke-width="1"/>
 
-    <text x="42" y="32" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#60a5fa" letter-spacing="2.5" font-weight="700">BACKEND &amp; MICROSERVICES</text>
-    <line x1="24" y1="42" x2="316" y2="42" stroke="#1e3a5f" stroke-width="0.8"/>
+    <!-- Row 1 Pills -->
+    <g transform="translate(20, 56)">
+      <!-- Apache Kafka -->
+      <rect x="0" y="0" width="144" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#38bdf8"/>
+      <text x="28" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">Apache Kafka</text>
 
-    <!-- Pill 1: Spring Boot -->
-    <rect x="20" y="52" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="20" y="56" width="2.5" height="36" rx="1" fill="#38bdf8"/>
-    <text x="32" y="70" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">Spring Boot</text>
-    <text x="32" y="85" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#60a5fa">REST, Security, Data</text>
+      <!-- RabbitMQ -->
+      <rect x="154" y="0" width="130" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="170" cy="18" r="4" fill="#38bdf8"/>
+      <text x="182" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">RabbitMQ</text>
 
-    <!-- Pill 2: FastAPI -->
-    <rect x="176" y="52" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="176" y="56" width="2.5" height="36" rx="1" fill="#38bdf8"/>
-    <text x="188" y="70" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">FastAPI</text>
-    <text x="188" y="85" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#60a5fa">Async Python APIs</text>
+      <!-- Redis Cache -->
+      <rect x="294" y="0" width="134" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="310" cy="18" r="4" fill="#38bdf8"/>
+      <text x="322" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">Redis Cache</text>
+    </g>
 
-    <!-- Pill 3: Express.js -->
-    <rect x="20" y="104" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="20" y="108" width="2.5" height="36" rx="1" fill="#38bdf8"/>
-    <text x="32" y="122" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">Express.js</text>
-    <text x="32" y="137" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#60a5fa">Node.js Middleware</text>
+    <!-- Row 2 Pills -->
+    <g transform="translate(20, 100)">
+      <!-- PostgreSQL -->
+      <rect x="0" y="0" width="134" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#0284c7"/>
+      <text x="28" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">PostgreSQL</text>
 
-    <!-- Pill 4: Spring Cloud -->
-    <rect x="176" y="104" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="176" y="108" width="2.5" height="36" rx="1" fill="#38bdf8"/>
-    <text x="188" y="122" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">Spring Cloud</text>
-    <text x="188" y="137" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#60a5fa">Gateway &amp; Eureka</text>
+      <!-- MongoDB -->
+      <rect x="144" y="0" width="124" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="160" cy="18" r="4" fill="#0284c7"/>
+      <text x="172" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">MongoDB</text>
+
+      <!-- Hibernate / JPA -->
+      <rect x="278" y="0" width="150" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="294" cy="18" r="4" fill="#0284c7"/>
+      <text x="306" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">Hibernate/JPA</text>
+    </g>
+
+    <!-- Bottom Feature Bar -->
+    <g transform="translate(20, 148)">
+      <rect width="428" height="32" rx="6" fill="#060e1c" stroke="#162b47" stroke-width="0.8"/>
+      <text x="214" y="20.5" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">
+        ⚡ <tspan fill="#38bdf8" font-weight="600">Pipelines:</tspan> Event streams, in-memory caching &amp; ACID storage
+      </text>
+    </g>
   </g>
 
-  <!-- ════════════ Card 4: DATABASES & CLOUD ════════════ -->
-  <g transform="translate(20, 245)">
-    <rect width="340" height="160" rx="10" fill="#0c1930" stroke="#1e3a5f" stroke-width="1"/>
-    <rect width="340" height="160" rx="10" fill="url(#gridDot)"/>
-    <rect x="1" y="14" width="3.5" height="132" rx="1.5" fill="#0ea5e9"/>
+  <!-- ════════════ PANEL 4: AI WORKFLOWS & CLOUD DEVOPS (x:508, y:278) ════════════ -->
+  <g transform="translate(508, 278)">
+    <rect width="468" height="196" rx="12" fill="url(#techCardBg)"/>
+    <rect width="468" height="196" rx="12" fill="url(#gridDot)"/>
+    <rect x="1" y="1" width="466" height="194" rx="11" fill="none" stroke="#38bdf8" stroke-width="1.2"/>
 
     <!-- Top Laser Runner -->
-    <line y1="1" y2="1" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" filter="url(#techGlow)">
-      <animate attributeName="x1" values="-60;340" dur="3.2s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="0;400" dur="3.2s" repeatCount="indefinite"/>
+    <line y1="1" y2="1" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" filter="url(#techGlow)">
+      <animate attributeName="x1" values="-80;468" dur="3.6s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;548" dur="3.6s" repeatCount="indefinite"/>
     </line>
 
-    <circle cx="280" cy="120" r="1.5" fill="#06b6d4">
-      <animate attributeName="cy" values="140;40;140" dur="6.2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.1;0.7;0.1" dur="6.2s" repeatCount="indefinite"/>
-    </circle>
+    <!-- Header Row -->
+    <g transform="translate(20, 18)">
+      <circle cx="6" cy="7" r="4" fill="#38bdf8">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="6" cy="7" r="8" fill="none" stroke="#38bdf8" stroke-width="0.8">
+        <animate attributeName="r" values="4;11;4" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="20" y="11" font-family="'Segoe UI', sans-serif" font-size="13.5" fill="#60a5fa" letter-spacing="1.5" font-weight="800">AI WORKFLOWS &amp; CLOUD</text>
 
-    <circle cx="28" cy="28" r="3.5" fill="#06b6d4">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="28" cy="28" r="7" fill="none" stroke="#06b6d4" stroke-width="0.8">
-      <animate attributeName="r" values="3.5;10;3.5" dur="2.1s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.8;0;0.8" dur="2.1s" repeatCount="indefinite"/>
-    </circle>
+      <rect x="312" y="-3" width="116" height="22" rx="11" fill="#0f2847" stroke="#1e3a5f" stroke-width="0.8"/>
+      <circle cx="324" cy="8" r="3" fill="#10b981">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="333" y="11.5" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#34d399" font-weight="800" letter-spacing="0.5">AGENTIC &amp; CI</text>
+    </g>
+    <line x1="20" y1="46" x2="448" y2="46" stroke="#1e3a5f" stroke-width="1"/>
 
-    <text x="42" y="32" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#38bdf8" letter-spacing="2.5" font-weight="700">DATABASES &amp; CLOUD</text>
-    <line x1="24" y1="42" x2="316" y2="42" stroke="#1e3a5f" stroke-width="0.8"/>
+    <!-- Row 1 Pills -->
+    <g transform="translate(20, 56)">
+      <!-- LangChain -->
+      <rect x="0" y="0" width="128" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#38bdf8"/>
+      <text x="28" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">LangChain</text>
 
-    <!-- Pill 1: PostgreSQL & MySQL -->
-    <rect x="20" y="52" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="20" y="56" width="2.5" height="36" rx="1" fill="#06b6d4"/>
-    <text x="32" y="70" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">PostgreSQL / MySQL</text>
-    <text x="32" y="85" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#38bdf8">ACID &amp; Relational</text>
+      <!-- RAG Workflows -->
+      <rect x="138" y="0" width="150" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="154" cy="18" r="4" fill="#38bdf8"/>
+      <text x="166" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">RAG Pipelines</text>
 
-    <!-- Pill 2: Redis -->
-    <rect x="176" y="52" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="176" y="56" width="2.5" height="36" rx="1" fill="#06b6d4"/>
-    <text x="188" y="70" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">Redis</text>
-    <text x="188" y="85" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#38bdf8">In-Memory Cache</text>
+      <!-- OpenAI APIs -->
+      <rect x="298" y="0" width="130" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="314" cy="18" r="4" fill="#38bdf8"/>
+      <text x="326" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">OpenAI APIs</text>
+    </g>
 
-    <!-- Pill 3: MongoDB -->
-    <rect x="20" y="104" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="20" y="108" width="2.5" height="36" rx="1" fill="#06b6d4"/>
-    <text x="32" y="122" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">MongoDB</text>
-    <text x="32" y="137" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#38bdf8">NoSQL Document DB</text>
+    <!-- Row 2 Pills -->
+    <g transform="translate(20, 100)">
+      <!-- Docker -->
+      <rect x="0" y="0" width="118" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#60a5fa"/>
+      <text x="28" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">Docker</text>
 
-    <!-- Pill 4: AWS & GCP -->
-    <rect x="176" y="104" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="176" y="108" width="2.5" height="36" rx="1" fill="#06b6d4"/>
-    <text x="188" y="122" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">AWS &amp; GCP</text>
-    <text x="188" y="137" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#38bdf8">Cloud Infrastructure</text>
-  </g>
+      <!-- AWS Cloud -->
+      <rect x="128" y="0" width="136" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="144" cy="18" r="4" fill="#60a5fa"/>
+      <text x="156" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">AWS (EC2/S3)</text>
 
-  <!-- ════════════ Card 5: AI & MACHINE LEARNING ════════════ -->
-  <g transform="translate(400, 245)">
-    <rect width="340" height="160" rx="10" fill="#0c1930" stroke="#1e3a5f" stroke-width="1"/>
-    <rect width="340" height="160" rx="10" fill="url(#gridDot)"/>
-    <rect x="1" y="14" width="3.5" height="132" rx="1.5" fill="#3b82f6"/>
+      <!-- CI/CD Pipelines -->
+      <rect x="274" y="0" width="154" height="36" rx="7" fill="#081426" stroke="#1a2e4c" stroke-width="1"/>
+      <circle cx="290" cy="18" r="4" fill="#60a5fa"/>
+      <text x="302" y="23" font-family="'Segoe UI', sans-serif" font-size="14" fill="#f1f5f9" font-weight="700">CI/CD Actions</text>
+    </g>
 
-    <!-- Top Laser Runner -->
-    <line y1="1" y2="1" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" filter="url(#techGlow)">
-      <animate attributeName="x1" values="-60;340" dur="3.6s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="0;400" dur="3.6s" repeatCount="indefinite"/>
-    </line>
-
-    <circle cx="280" cy="120" r="1.5" fill="#38bdf8">
-      <animate attributeName="cy" values="140;40;140" dur="5.8s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.1;0.7;0.1" dur="5.8s" repeatCount="indefinite"/>
-    </circle>
-
-    <circle cx="28" cy="28" r="3.5" fill="#38bdf8">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.9s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="28" cy="28" r="7" fill="none" stroke="#38bdf8" stroke-width="0.8">
-      <animate attributeName="r" values="3.5;10;3.5" dur="1.9s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.8;0;0.8" dur="1.9s" repeatCount="indefinite"/>
-    </circle>
-
-    <text x="42" y="32" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#60a5fa" letter-spacing="2.5" font-weight="700">AI / LLM ARCHITECTURES</text>
-    <line x1="24" y1="42" x2="316" y2="42" stroke="#1e3a5f" stroke-width="0.8"/>
-
-    <!-- Pill 1: LangChain -->
-    <rect x="20" y="52" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="20" y="56" width="2.5" height="36" rx="1" fill="#38bdf8"/>
-    <text x="32" y="70" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">LangChain</text>
-    <text x="32" y="85" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#60a5fa">LLM Agents &amp; Memory</text>
-
-    <!-- Pill 2: RAG Pipelines -->
-    <rect x="176" y="52" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="176" y="56" width="2.5" height="36" rx="1" fill="#38bdf8"/>
-    <text x="188" y="70" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">RAG Pipelines</text>
-    <text x="188" y="85" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#60a5fa">Vector Search &amp; Q&amp;A</text>
-
-    <!-- Pill 3: Spring AI -->
-    <rect x="20" y="104" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="20" y="108" width="2.5" height="36" rx="1" fill="#38bdf8"/>
-    <text x="32" y="122" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">Spring AI</text>
-    <text x="32" y="137" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#60a5fa">Java LLM Integrations</text>
-
-    <!-- Pill 4: Scikit-Learn -->
-    <rect x="176" y="104" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="176" y="108" width="2.5" height="36" rx="1" fill="#38bdf8"/>
-    <text x="188" y="122" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">Scikit-Learn</text>
-    <text x="188" y="137" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#60a5fa">Machine Learning</text>
-  </g>
-
-  <!-- ════════════ Card 6: DEVOPS & SYSTEMS ════════════ -->
-  <g transform="translate(780, 245)">
-    <rect width="340" height="160" rx="10" fill="#0c1930" stroke="#1e3a5f" stroke-width="1"/>
-    <rect width="340" height="160" rx="10" fill="url(#gridDot)"/>
-    <rect x="1" y="14" width="3.5" height="132" rx="1.5" fill="#0ea5e9"/>
-
-    <!-- Top Laser Runner -->
-    <line y1="1" y2="1" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" filter="url(#techGlow)">
-      <animate attributeName="x1" values="-60;340" dur="4s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="0;400" dur="4s" repeatCount="indefinite"/>
-    </line>
-
-    <circle cx="280" cy="120" r="1.5" fill="#06b6d4">
-      <animate attributeName="cy" values="140;40;140" dur="6.8s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.1;0.7;0.1" dur="6.8s" repeatCount="indefinite"/>
-    </circle>
-
-    <circle cx="28" cy="28" r="3.5" fill="#06b6d4">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.7s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="28" cy="28" r="7" fill="none" stroke="#06b6d4" stroke-width="0.8">
-      <animate attributeName="r" values="3.5;10;3.5" dur="1.7s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.8;0;0.8" dur="1.7s" repeatCount="indefinite"/>
-    </circle>
-
-    <text x="42" y="32" font-family="'Segoe UI', sans-serif" font-size="11.5" fill="#38bdf8" letter-spacing="2.5" font-weight="700">DEVOPS &amp; MESSAGING</text>
-    <line x1="24" y1="42" x2="316" y2="42" stroke="#1e3a5f" stroke-width="0.8"/>
-
-    <!-- Pill 1: Apache Kafka -->
-    <rect x="20" y="52" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="20" y="56" width="2.5" height="36" rx="1" fill="#06b6d4"/>
-    <text x="32" y="70" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">Apache Kafka</text>
-    <text x="32" y="85" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#38bdf8">Event Streaming</text>
-
-    <!-- Pill 2: RabbitMQ -->
-    <rect x="176" y="52" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="176" y="56" width="2.5" height="36" rx="1" fill="#06b6d4"/>
-    <text x="188" y="70" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">RabbitMQ</text>
-    <text x="188" y="85" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#38bdf8">Message Brokering</text>
-
-    <!-- Pill 3: Docker & Linux -->
-    <rect x="20" y="104" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="20" y="108" width="2.5" height="36" rx="1" fill="#06b6d4"/>
-    <text x="32" y="122" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">Docker &amp; Linux</text>
-    <text x="32" y="137" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#38bdf8">Containers &amp; Shell</text>
-
-    <!-- Pill 4: Git & Jest -->
-    <rect x="176" y="104" width="144" height="44" rx="6" fill="#081426" stroke="#1a2e4c" stroke-width="0.8"/>
-    <rect x="176" y="108" width="2.5" height="36" rx="1" fill="#06b6d4"/>
-    <text x="188" y="122" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f1f5f9" font-weight="700">Git &amp; Jest</text>
-    <text x="188" y="137" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#38bdf8">CI/CD &amp; Unit Testing</text>
+    <!-- Bottom Feature Bar -->
+    <g transform="translate(20, 148)">
+      <rect width="428" height="32" rx="6" fill="#060e1c" stroke="#162b47" stroke-width="0.8"/>
+      <text x="214" y="20.5" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">
+        ⚡ <tspan fill="#38bdf8" font-weight="600">DevOps &amp; AI:</tspan> Containerized deployment, vector search &amp; automation
+      </text>
+    </g>
   </g>
 </svg>
