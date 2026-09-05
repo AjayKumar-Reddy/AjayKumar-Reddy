@@ -1,65 +1,201 @@
-<svg width="1140" height="250" viewBox="0 0 1140 250" xmlns="http://www.w3.org/2000/svg">
+<svg width="1140" height="340" viewBox="0 0 1140 340" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.25"/>
+    <!-- Card Background Gradient -->
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b172a"/>
+      <stop offset="100%" stop-color="#070f1e"/>
     </linearGradient>
-    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0d1f3c"/>
-      <stop offset="100%" stop-color="#0a1628"/>
+
+    <!-- Outer Border Glow -->
+    <linearGradient id="borderGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#1d4ed8" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.5"/>
     </linearGradient>
-    <pattern id="aboutDots" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="12" cy="12" r="0.4" fill="#3b82f6" opacity="0.06"/>
+
+    <!-- Animated Progress Bar Gradient 1 -->
+    <linearGradient id="barGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="70%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#93c5fd"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="-200 0" to="200 0" dur="3s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Animated Progress Bar Gradient 2 -->
+    <linearGradient id="barGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="70%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#a5b4fc"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="-200 0" to="200 0" dur="3.5s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Laser Scan Beam -->
+    <linearGradient id="scanBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="-500 0" to="500 0" dur="4s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <pattern id="termGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.5" fill="#3b82f6" opacity="0.06"/>
     </pattern>
   </defs>
 
-  <!-- Card background -->
-  <rect width="1140" height="250" fill="url(#cardBg)" rx="12"/>
-  <rect width="1140" height="250" fill="url(#aboutDots)" rx="12"/>
-  <rect x="1" y="1" width="1138" height="248" fill="none" stroke="url(#cardBorder)" stroke-width="1.5" rx="11">
-    <animate attributeName="stroke-opacity" values="0.4;0.7;0.4" dur="5s" repeatCount="indefinite"/>
+  <!-- Base Card -->
+  <rect width="1140" height="340" rx="14" fill="url(#termBg)"/>
+  <rect width="1140" height="340" rx="14" fill="url(#termGrid)"/>
+
+  <!-- Glowing Animated Border -->
+  <rect x="1" y="1" width="1138" height="338" rx="13" fill="none" stroke="url(#borderGlow)" stroke-width="1.4">
+    <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="4s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- Code brackets icon -->
-  <text x="570" y="45" font-family="'Courier New', 'Consolas', monospace" font-size="24" fill="#3b82f6" text-anchor="middle" font-weight="bold" opacity="0.9">&lt; / &gt;</text>
+  <!-- Top Terminal Title Bar -->
+  <rect x="1" y="1" width="1138" height="38" rx="13" fill="#0f1f38" opacity="0.9"/>
+  <line x1="1" y1="39" x2="1139" y2="39" stroke="#1e3a5f" stroke-width="1"/>
 
-  <!-- Main tagline -->
-  <text x="570" y="95" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="bold" text-anchor="middle" fill="#ffffff">Building. <tspan fill="#3b82f6">Learning.</tspan> Shipping.</text>
+  <!-- macOS Window Controls -->
+  <circle cx="24" cy="20" r="5.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="42" cy="20" r="5.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="60" cy="20" r="5.5" fill="#10b981" opacity="0.85"/>
 
-  <!-- Subtitle -->
-  <text x="570" y="125" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#94a3b8" text-anchor="middle" letter-spacing="1">Open Source &amp; Coding Journey</text>
+  <!-- Terminal Session Title -->
+  <text x="570" y="24" font-family="'Courier New', 'Consolas', monospace" font-size="12" fill="#94a3b8" text-anchor="middle" font-weight="600">
+    ajay@cloud-cluster: ~/core-engineering-profile.json (zsh)
+  </text>
 
-  <!-- Tech badges — Row 1 -->
-  <!-- 5 badges × 100px + 4 gaps × 12px = 548px, start x = (1140-548)/2 = 296 -->
+  <!-- Right Status Badge in Window Bar -->
+  <g transform="translate(1030, 20)">
+    <circle cx="-10" cy="0" r="3.5" fill="#10b981">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="3.5" font-family="'Segoe UI', sans-serif" font-size="10" fill="#34d399" font-weight="700" letter-spacing="1">ONLINE</text>
+  </g>
 
-  <rect x="296" y="155" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
-  <text x="346" y="174" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="500">Java</text>
+  <!-- Scan Beam across Window Divider -->
+  <rect x="1" y="38" width="1138" height="1.5" fill="url(#scanBeam)"/>
 
-  <rect x="408" y="155" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
-  <text x="458" y="174" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="500">Python</text>
+  <!-- ════════════ LEFT COLUMN: DEVELOPER CLI SPECIFICATION (Width: 540) ════════════ -->
+  <g transform="translate(24, 56)">
+    <!-- Code Editor Box -->
+    <rect width="530" height="262" rx="8" fill="#081326" stroke="#1a2d4c" stroke-width="1"/>
 
-  <rect x="520" y="155" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
-  <text x="570" y="174" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="500">React</text>
+    <!-- Left Accent Bar -->
+    <rect x="0" y="10" width="3" height="242" rx="1.5" fill="#3b82f6" opacity="0.8"/>
 
-  <rect x="632" y="155" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
-  <text x="682" y="174" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="500">Next.js</text>
+    <!-- Line Numbers & Code Lines using inline tspans for seamless flow -->
+    <g font-family="'Courier New', 'Consolas', monospace" font-size="12">
+      <!-- Line 1 -->
+      <text x="18" y="30" fill="#475569">01</text>
+      <text x="48" y="30"><tspan fill="#f43f5e">const </tspan><tspan fill="#60a5fa">softwareEngineer </tspan><tspan fill="#e2e8f0">= {</tspan></text>
 
-  <rect x="744" y="155" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
-  <text x="794" y="174" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle" font-weight="500">Spring Boot</text>
+      <!-- Line 2 -->
+      <text x="18" y="58" fill="#475569">02</text>
+      <text x="56" y="58"><tspan fill="#93c5fd">name: </tspan><tspan fill="#86efac">"Ajay Kumar S"</tspan><tspan fill="#e2e8f0">,</tspan></text>
 
-  <!-- Tech badges — Row 2 -->
-  <rect x="296" y="193" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
-  <text x="346" y="212" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="500">FastAPI</text>
+      <!-- Line 3 -->
+      <text x="18" y="86" fill="#475569">03</text>
+      <text x="56" y="86"><tspan fill="#93c5fd">institution: </tspan><tspan fill="#86efac">"MSRIT Bangalore"</tspan><tspan fill="#e2e8f0">,</tspan></text>
 
-  <rect x="408" y="193" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
-  <text x="458" y="212" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="500">AWS</text>
+      <!-- Line 4 -->
+      <text x="18" y="114" fill="#475569">04</text>
+      <text x="56" y="114"><tspan fill="#93c5fd">academics: </tspan><tspan fill="#86efac">"B.Tech ISE (9.32) | Dip. (9.94)"</tspan><tspan fill="#e2e8f0">,</tspan></text>
 
-  <rect x="520" y="193" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
-  <text x="570" y="212" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="500">Docker</text>
+      <!-- Line 5 -->
+      <text x="18" y="142" fill="#475569">05</text>
+      <text x="56" y="142"><tspan fill="#93c5fd">dsa_mastery: </tspan><tspan fill="#fbcfe8">"400+ Problems in Java"</tspan><tspan fill="#e2e8f0">,</tspan></text>
 
-  <rect x="632" y="193" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
-  <text x="682" y="212" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="500">Kafka</text>
+      <!-- Line 6 -->
+      <text x="18" y="170" fill="#475569">06</text>
+      <text x="56" y="170"><tspan fill="#93c5fd">architecture: </tspan><tspan fill="#86efac">["Distributed", "Kafka", "Cloud"]</tspan><tspan fill="#e2e8f0">,</tspan></text>
 
-  <rect x="744" y="193" width="100" height="28" rx="6" fill="#0f2847" stroke="#1e3a5f" stroke-width="1"/>
-  <text x="794" y="212" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle" font-weight="500">Git</text>
+      <!-- Line 7 -->
+      <text x="18" y="198" fill="#475569">07</text>
+      <text x="56" y="198"><tspan fill="#93c5fd">mission: </tspan><tspan fill="#fde047">"Building high-scale resilient systems"</tspan></text>
+
+      <!-- Line 8 -->
+      <text x="18" y="226" fill="#475569">08</text>
+      <text x="48" y="226" fill="#e2e8f0">};</text>
+      <!-- Blinking Terminal Prompt -->
+      <text x="75" y="226" fill="#38bdf8">&gt; _
+        <animate attributeName="opacity" values="0;1;0" dur="0.9s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- Bottom Language Tags in Left Box -->
+    <g transform="translate(18, 238)">
+      <rect x="0" y="0" width="70" height="16" rx="3" fill="#1e293b"/>
+      <text x="35" y="12" font-family="'Courier New', monospace" font-size="9" fill="#94a3b8" text-anchor="middle">JSON/TS</text>
+
+      <rect x="76" y="0" width="70" height="16" rx="3" fill="#1e293b"/>
+      <text x="111" y="12" font-family="'Courier New', monospace" font-size="9" fill="#94a3b8" text-anchor="middle">UTF-8</text>
+
+      <rect x="152" y="0" width="85" height="16" rx="3" fill="#1e293b"/>
+      <text x="194.5" y="12" font-family="'Courier New', monospace" font-size="9" fill="#60a5fa" text-anchor="middle">branch: main</text>
+    </g>
+  </g>
+
+  <!-- ════════════ RIGHT COLUMN: SYSTEMS & ARCHITECTURE GAUGES (Width: 540) ════════════ -->
+  <g transform="translate(578, 56)">
+    <!-- Container Box -->
+    <rect width="538" height="262" rx="8" fill="#081326" stroke="#1a2d4c" stroke-width="1"/>
+
+    <!-- Section Header -->
+    <text x="24" y="28" font-family="'Segoe UI', sans-serif" font-size="11" fill="#60a5fa" font-weight="700" letter-spacing="2">
+      ENGINEERING HUD &amp; COMPETENCIES
+    </text>
+    <line x1="24" y1="36" x2="514" y2="36" stroke="#1e3a5f" stroke-width="0.8"/>
+
+    <!-- Gauge 1: Microservices & Event-Driven (Kafka / RabbitMQ) -->
+    <g transform="translate(24, 48)">
+      <text x="0" y="14" font-family="'Segoe UI', sans-serif" font-size="12" fill="#e2e8f0" font-weight="600">Distributed Microservices &amp; Event Streaming</text>
+      <text x="490" y="14" font-family="'Courier New', monospace" font-size="11.5" fill="#38bdf8" text-anchor="end" font-weight="bold">94%</text>
+      <rect x="0" y="22" width="490" height="8" rx="4" fill="#0f1f38"/>
+      <rect x="0" y="22" width="460" height="8" rx="4" fill="url(#barGrad1)"/>
+    </g>
+
+    <!-- Gauge 2: Backend Architecture (Java Spring Boot, FastAPI, Node) -->
+    <g transform="translate(24, 92)">
+      <text x="0" y="14" font-family="'Segoe UI', sans-serif" font-size="12" fill="#e2e8f0" font-weight="600">Core Backend (Spring Boot, FastAPI, Express)</text>
+      <text x="490" y="14" font-family="'Courier New', monospace" font-size="11.5" fill="#60a5fa" text-anchor="end" font-weight="bold">92%</text>
+      <rect x="0" y="22" width="490" height="8" rx="4" fill="#0f1f38"/>
+      <rect x="0" y="22" width="450" height="8" rx="4" fill="url(#barGrad2)"/>
+    </g>
+
+    <!-- Gauge 3: Full Stack & Modern Web (Next.js 15, React, TypeScript) -->
+    <g transform="translate(24, 136)">
+      <text x="0" y="14" font-family="'Segoe UI', sans-serif" font-size="12" fill="#e2e8f0" font-weight="600">Full Stack &amp; Modern Web (Next.js 15, React, Tailwind)</text>
+      <text x="490" y="14" font-family="'Courier New', monospace" font-size="11.5" fill="#38bdf8" text-anchor="end" font-weight="bold">90%</text>
+      <rect x="0" y="22" width="490" height="8" rx="4" fill="#0f1f38"/>
+      <rect x="0" y="22" width="440" height="8" rx="4" fill="url(#barGrad1)"/>
+    </g>
+
+    <!-- Gauge 4: Cloud, Containers & AI (AWS, GCP, Docker, LangChain) -->
+    <g transform="translate(24, 180)">
+      <text x="0" y="14" font-family="'Segoe UI', sans-serif" font-size="12" fill="#e2e8f0" font-weight="600">Cloud, Containers &amp; GenAI (Docker, AWS, LangChain)</text>
+      <text x="490" y="14" font-family="'Courier New', monospace" font-size="11.5" fill="#60a5fa" text-anchor="end" font-weight="bold">86%</text>
+      <rect x="0" y="22" width="490" height="8" rx="4" fill="#0f1f38"/>
+      <rect x="0" y="22" width="420" height="8" rx="4" fill="url(#barGrad2)"/>
+    </g>
+
+    <!-- Bottom Activity Metric Badges -->
+    <g transform="translate(24, 226)">
+      <!-- Badge 1 -->
+      <rect x="0" y="0" width="115" height="26" rx="5" fill="#0d1f3c" stroke="#1e3a5f" stroke-width="0.8"/>
+      <text x="57.5" y="16.5" font-family="'Segoe UI', sans-serif" font-size="10.5" fill="#cbd5e1" text-anchor="middle" font-weight="600">⚡ 400+ DSA Java</text>
+
+      <!-- Badge 2 -->
+      <rect x="125" y="0" width="115" height="26" rx="5" fill="#0d1f3c" stroke="#1e3a5f" stroke-width="0.8"/>
+      <text x="182.5" y="16.5" font-family="'Segoe UI', sans-serif" font-size="10.5" fill="#cbd5e1" text-anchor="middle" font-weight="600">🛡️ High Scale</text>
+
+      <!-- Badge 3 -->
+      <rect x="250" y="0" width="115" height="26" rx="5" fill="#0d1f3c" stroke="#1e3a5f" stroke-width="0.8"/>
+      <text x="307.5" y="16.5" font-family="'Segoe UI', sans-serif" font-size="10.5" fill="#cbd5e1" text-anchor="middle" font-weight="600">🚀 Microservices</text>
+
+      <!-- Badge 4 -->
+      <rect x="375" y="0" width="115" height="26" rx="5" fill="#0d1f3c" stroke="#1e3a5f" stroke-width="0.8"/>
+      <text x="432.5" y="16.5" font-family="'Segoe UI', sans-serif" font-size="10.5" fill="#38bdf8" text-anchor="middle" font-weight="600">🧠 GenAI RAG</text>
+    </g>
+  </g>
 </svg>

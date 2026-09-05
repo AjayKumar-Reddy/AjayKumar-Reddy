@@ -1,29 +1,29 @@
 <div align="center">
 
-<img src="./assets/header.svg" width="100%" alt="Ajay Kumar S — Aspiring Software Engineer">
+<img src="./assets/header.svg" width="100%" alt="Ajay Kumar S — Software Engineer">
 
 </div>
 
 <div align="center">
-<img src="./assets/about-card.svg" width="95%" alt="Building. Learning. Shipping. — Open Source & Coding Journey">
-</div>
-
-<br>
-
-<div align="center">
-<img src="./assets/tech-grid.svg" width="95%" alt="Technology Stack">
+<img src="./assets/about-card.svg" width="95%" alt="Ajay Kumar S — Engineering Terminal &amp; HUD">
 </div>
 
 <br>
 
 <div align="center">
-<img src="./assets/projects-card.svg" width="95%" alt="Featured Projects">
+<img src="./assets/tech-grid.svg" width="95%" alt="Technical Proficiencies &amp; Toolkit">
 </div>
 
 <br>
 
 <div align="center">
-  <img src="./assets/stats-banner.svg" width="80%" alt="GitHub Analytics">
+<img src="./assets/projects-card.svg" width="95%" alt="Featured Flagship Projects">
+</div>
+
+<br>
+
+<div align="center">
+  <img src="./assets/stats-banner.svg" width="80%" alt="GitHub Telemetry &amp; Analytics">
 
   <br><br>
 
@@ -38,7 +38,7 @@
 <br><br>
 
 <div align="center">
-<img src="./assets/connect-header.svg" width="70%" alt="Let's Connect">
+<img src="./assets/connect-header.svg" width="70%" alt="Connect &amp; Collaborate">
 </div>
 
 <p align="center">
