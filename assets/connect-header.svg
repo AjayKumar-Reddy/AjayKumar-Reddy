@@ -1,48 +1,54 @@
 <svg width="1200" height="90" viewBox="0 0 1200 90" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Shifting Gradient for Connect Title -->
-    <linearGradient id="connectTitleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="50%" stop-color="#60a5fa"/>
-      <stop offset="100%" stop-color="#818cf8"/>
-      <animateTransform attributeName="gradientTransform" type="translate" from="-300 0" to="300 0" dur="5s" repeatCount="indefinite"/>
+    <!-- Steady Solid Underline Gradient -->
+    <linearGradient id="steadyConnectLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Flowing Underline Gradient -->
-    <linearGradient id="connectLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#60a5fa" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
-      <animateTransform attributeName="gradientTransform" type="translate" from="-500 0" to="500 0" dur="4s" repeatCount="indefinite"/>
-    </linearGradient>
+    <filter id="connectGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
   </defs>
 
-  <!-- Left Signal Wave Arc -->
-  <g transform="translate(380, 42)">
-    <circle cx="0" cy="0" r="4" fill="#38bdf8">
-      <animate attributeName="r" values="3;6;3" dur="2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+  <!-- Left Broadcasting Radio Waves (Real Motion) -->
+  <g transform="translate(330, 42)">
+    <circle cx="0" cy="0" r="4" fill="#38bdf8"/>
+    <circle cx="0" cy="0" r="8" fill="none" stroke="#38bdf8" stroke-width="1.2">
+      <animate attributeName="r" values="4;22" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="8" fill="none" stroke="#60a5fa" stroke-width="1.2">
+      <animate attributeName="r" values="4;22" dur="2s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0" dur="2s" begin="1s" repeatCount="indefinite"/>
     </circle>
   </g>
 
-  <!-- Title -->
-  <text x="600" y="48" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif" font-size="28" font-weight="800" fill="url(#connectTitleGrad)" text-anchor="middle" letter-spacing="2.5">
-    CONNECT &amp; COLLABORATE
+  <text x="600" y="44" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="800" text-anchor="middle" letter-spacing="2.5">
+    <tspan fill="#60a5fa">CONNECT &amp; </tspan><tspan fill="#38bdf8">COLLABORATE</tspan>
   </text>
 
-  <!-- Right Signal Wave Arc -->
-  <g transform="translate(820, 42)">
-    <circle cx="0" cy="0" r="4" fill="#818cf8">
-      <animate attributeName="r" values="3;6;3" dur="2.3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.3s" repeatCount="indefinite"/>
+  <!-- Right Broadcasting Radio Waves (Real Motion) -->
+  <g transform="translate(870, 42)">
+    <circle cx="0" cy="0" r="4" fill="#38bdf8"/>
+    <circle cx="0" cy="0" r="8" fill="none" stroke="#38bdf8" stroke-width="1.2">
+      <animate attributeName="r" values="4;22" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="8" fill="none" stroke="#60a5fa" stroke-width="1.2">
+      <animate attributeName="r" values="4;22" dur="2s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0" dur="2s" begin="1s" repeatCount="indefinite"/>
     </circle>
   </g>
 
-  <!-- Flowing Underline -->
-  <rect x="360" y="64" width="480" height="2" fill="url(#connectLineGrad)"/>
+  <!-- Underline Track -->
+  <rect x="360" y="62" width="480" height="2" fill="url(#steadyConnectLine)"/>
 
-  <!-- Center Pulse Dot -->
-  <circle cx="600" cy="65" r="2.5" fill="#60a5fa">
-    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
-  </circle>
+  <!-- Traveling Laser Beam along Underline (Real Motion) -->
+  <line y1="63" y2="63" stroke="#67e8f9" stroke-width="2.5" stroke-linecap="round" filter="url(#connectGlow)">
+    <animate attributeName="x1" values="360;760;360" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="440;840;440" dur="3s" repeatCount="indefinite"/>
+  </line>
 </svg>

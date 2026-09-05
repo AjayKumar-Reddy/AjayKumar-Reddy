@@ -1,64 +1,42 @@
 <svg width="1200" height="400" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background Gradient -->
+    <!-- Solid Navy Background Gradient (Steady, No Color Cycling) -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#040b17"/>
       <stop offset="50%" stop-color="#081326"/>
-      <stop offset="100%" stop-color="#0d1f3c"/>
+      <stop offset="100%" stop-color="#0c1d38"/>
     </linearGradient>
 
-    <!-- Animated Flowing Accent Line Gradient -->
-    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Steady Clean Accent Gradient -->
+    <linearGradient id="steadyLine" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0"/>
-      <stop offset="25%" stop-color="#3b82f6" stop-opacity="0.8"/>
-      <stop offset="50%" stop-color="#93c5fd" stop-opacity="1"/>
-      <stop offset="75%" stop-color="#3b82f6" stop-opacity="0.8"/>
+      <stop offset="25%" stop-color="#2563eb" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="75%" stop-color="#2563eb" stop-opacity="0.6"/>
       <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0"/>
-      <animateTransform attributeName="gradientTransform" type="translate" from="-600 0" to="600 0" dur="4s" repeatCount="indefinite"/>
-    </linearGradient>
-
-    <!-- Top Border Shimmer Gradient -->
-    <linearGradient id="topShimmer" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#60a5fa" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
-      <animateTransform attributeName="gradientTransform" type="translate" from="-1200 0" to="1200 0" dur="6s" repeatCount="indefinite"/>
-    </linearGradient>
-
-    <!-- Name Shimmer Gradient -->
-    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="50%" stop-color="#60a5fa"/>
-      <stop offset="100%" stop-color="#818cf8"/>
-      <animateTransform attributeName="gradientTransform" type="translate" from="-200 0" to="200 0" dur="5s" repeatCount="indefinite"/>
     </linearGradient>
 
     <!-- Ambient Glow Orbs -->
     <radialGradient id="orbGlow1" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.18"/>
-      <stop offset="60%" stop-color="#1e40af" stop-opacity="0.06"/>
-      <stop offset="100%" stop-color="#050d1a" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.2"/>
+      <stop offset="70%" stop-color="#1e40af" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#040b17" stop-opacity="0"/>
     </radialGradient>
 
     <radialGradient id="orbGlow2" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.15"/>
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.18"/>
       <stop offset="70%" stop-color="#0369a1" stop-opacity="0.04"/>
-      <stop offset="100%" stop-color="#050d1a" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#040b17" stop-opacity="0"/>
     </radialGradient>
 
-    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#0a1628" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Cyber / Tech Dot Grid Pattern -->
+    <!-- Cyber Dot Grid Pattern -->
     <pattern id="dotGrid" width="36" height="36" patternUnits="userSpaceOnUse">
-      <circle cx="18" cy="18" r="0.7" fill="#60a5fa" opacity="0.12"/>
+      <circle cx="18" cy="18" r="0.7" fill="#60a5fa" opacity="0.1"/>
     </pattern>
 
-    <!-- Filter for Soft Glow -->
+    <!-- Filter for Glowing Photon Heads -->
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
   </defs>
@@ -67,10 +45,7 @@
   <rect width="1200" height="400" fill="url(#bgGrad)"/>
   <rect width="1200" height="400" fill="url(#dotGrid)"/>
 
-  <!-- Top Shimmer Border -->
-  <line x1="0" y1="1" x2="1200" y2="1" stroke="url(#topShimmer)" stroke-width="2"/>
-
-  <!-- Breathing Ambient Glow Orbs -->
+  <!-- Ambient Glow Orbs with Gentle Breathing Scale -->
   <circle cx="200" cy="130" r="260" fill="url(#orbGlow1)">
     <animate attributeName="r" values="240;280;240" dur="7s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" repeatCount="indefinite"/>
@@ -81,9 +56,33 @@
     <animate attributeName="opacity" values="0.6;1;0.6" dur="8s" repeatCount="indefinite"/>
   </circle>
 
-  <circle cx="600" cy="200" r="280" fill="url(#centerGlow)">
-    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="6s" repeatCount="indefinite"/>
-  </circle>
+  <!-- Floating Cyber Dust Particles (Real Physical Motion) -->
+  <g fill="#38bdf8">
+    <circle cx="180" cy="280" r="1.4" opacity="0.3">
+      <animate attributeName="cy" values="340;60;340" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.1;0.6;0.1" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="340" cy="160" r="1.6" opacity="0.4">
+      <animate attributeName="cy" values="280;40;280" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="520" cy="320" r="1.2" opacity="0.3">
+      <animate attributeName="cy" values="360;100;360" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.1;0.5;0.1" dur="13s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="680" cy="80" r="1.5" opacity="0.4">
+      <animate attributeName="cy" values="120;340;120" dur="12s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.1;0.6;0.1" dur="12s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="860" cy="220" r="1.4" opacity="0.3">
+      <animate attributeName="cy" values="320;50;320" dur="10s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1040" cy="140" r="1.8" opacity="0.5">
+      <animate attributeName="cy" values="240;30;240" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
 
   <!-- Left Side Constellation Network -->
   <g opacity="0.25" stroke="#3b82f6" stroke-width="0.8" fill="none">
@@ -96,15 +95,15 @@
     <line x1="70" y1="80" x2="120" y2="280"/>
   </g>
 
-  <!-- Animated Data Packets along Left Network -->
-  <circle r="3" fill="#60a5fa" filter="url(#glow)">
-    <animateMotion path="M 70,80 L 160,140 L 250,60 L 330,120" dur="4.5s" repeatCount="indefinite"/>
+  <!-- Moving Data Packets on Left Network (Motion Animation) -->
+  <circle r="3.2" fill="#38bdf8" filter="url(#glow)">
+    <animateMotion path="M 70,80 L 160,140 L 250,60 L 330,120 L 260,330" dur="5s" repeatCount="indefinite"/>
   </circle>
-  <circle r="2.5" fill="#38bdf8" filter="url(#glow)">
-    <animateMotion path="M 330,120 L 260,330 L 120,280 L 160,140" dur="6s" repeatCount="indefinite"/>
+  <circle r="2.8" fill="#67e8f9" filter="url(#glow)">
+    <animateMotion path="M 260,330 L 120,280 L 160,140 L 70,80 L 120,280" dur="6.5s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- Left Constellation Nodes with Staggered Pulses -->
+  <!-- Left Nodes -->
   <g fill="#60a5fa">
     <circle cx="70" cy="80" r="2.5" opacity="0.6"/>
     <circle cx="160" cy="140" r="3.5" opacity="0.8">
@@ -113,7 +112,7 @@
     </circle>
     <circle cx="250" cy="60" r="2.5" opacity="0.6"/>
     <circle cx="330" cy="120" r="3.2" opacity="0.7">
-      <animate attributeName="r" values="2.5;4;2.5" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="2.5;4.5;2.5" dur="4s" repeatCount="indefinite"/>
     </circle>
     <circle cx="120" cy="280" r="3" opacity="0.6"/>
     <circle cx="260" cy="330" r="3.2" opacity="0.7">
@@ -130,24 +129,23 @@
     <line x1="1020" y1="250" x2="910" y2="305"/>
     <line x1="910" y1="305" x2="870" y2="85"/>
     <line x1="910" y1="305" x2="810" y2="340"/>
-    <line x1="960" y1="165" x2="1020" y2="250"/>
   </g>
 
-  <!-- Animated Data Packets along Right Network -->
-  <circle r="3" fill="#93c5fd" filter="url(#glow)">
-    <animateMotion path="M 1060,70 L 1120,150 L 1020,250 L 910,305" dur="5s" repeatCount="indefinite"/>
+  <!-- Moving Data Packets on Right Network -->
+  <circle r="3.2" fill="#38bdf8" filter="url(#glow)">
+    <animateMotion path="M 870,85 L 960,165 L 1060,70 L 1120,150 L 1020,250" dur="5.5s" repeatCount="indefinite"/>
   </circle>
-  <circle r="2.5" fill="#60a5fa" filter="url(#glow)">
-    <animateMotion path="M 910,305 L 870,85 L 960,165 L 1020,250" dur="6.5s" repeatCount="indefinite"/>
+  <circle r="2.8" fill="#67e8f9" filter="url(#glow)">
+    <animateMotion path="M 1020,250 L 910,305 L 810,340 L 910,305 L 870,85" dur="7s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- Right Constellation Nodes -->
+  <!-- Right Nodes -->
   <g fill="#93c5fd">
     <circle cx="870" cy="85" r="2.5" opacity="0.6"/>
     <circle cx="960" cy="165" r="3" opacity="0.6"/>
     <circle cx="1060" cy="70" r="2.5" opacity="0.6"/>
     <circle cx="1120" cy="150" r="3.5" opacity="0.8">
-      <animate attributeName="r" values="3;5.2;3" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="3;5;3" dur="3.2s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0.5;1;0.5" dur="3.2s" repeatCount="indefinite"/>
     </circle>
     <circle cx="1020" cy="250" r="3" opacity="0.7">
@@ -157,8 +155,8 @@
     <circle cx="810" cy="340" r="3" opacity="0.6"/>
   </g>
 
-  <!-- Floating Tech Corner Accents -->
-  <g opacity="0.35" stroke="#3b82f6" stroke-width="1.2" fill="none">
+  <!-- Floating HUD Corner Brackets -->
+  <g opacity="0.4" stroke="#3b82f6" stroke-width="1.2" fill="none">
     <path d="M 30,50 L 30,30 L 50,30"/>
     <circle cx="30" cy="30" r="2" fill="#3b82f6"/>
     <path d="M 30,350 L 30,370 L 50,370"/>
@@ -169,7 +167,7 @@
     <circle cx="1170" cy="370" r="2" fill="#3b82f6"/>
   </g>
 
-  <!-- Center Decorative Flanking Lines & Hex Accents -->
+  <!-- Center Decorative Flanking Lines -->
   <g opacity="0.4">
     <line x1="330" y1="112" x2="430" y2="112" stroke="#3b82f6" stroke-width="1"/>
     <circle cx="430" cy="112" r="2" fill="#60a5fa"/>
@@ -177,25 +175,23 @@
     <circle cx="770" cy="112" r="2" fill="#60a5fa"/>
   </g>
 
-  <!-- Role Badge: SOFTWARE ENGINEER (NO "ASPIRING") -->
+  <!-- Role Badge: SOFTWARE ENGINEER (Clean Glass & Neon Indicator) -->
   <g transform="translate(600, 112)">
-    <rect x="-140" y="-14" width="280" height="28" rx="14" fill="#0f2847" stroke="#3b82f6" stroke-width="1.2" opacity="0.9">
-      <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="3s" repeatCount="indefinite"/>
-    </rect>
+    <rect x="-140" y="-14" width="280" height="28" rx="14" fill="#0f2847" stroke="#3b82f6" stroke-width="1.2" opacity="0.95"/>
     <!-- Glowing beacon inside badge -->
     <circle cx="-118" cy="0" r="3.5" fill="#38bdf8">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/>
     </circle>
-    <text x="-105" y="4" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif" font-size="11.5" fill="#93c5fd" letter-spacing="3.5" font-weight="700">SOFTWARE ENGINEER</text>
+    <text x="-105" y="4" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5" fill="#93c5fd" letter-spacing="3.5" font-weight="700">SOFTWARE ENGINEER</text>
   </g>
 
-  <!-- Main Name: AJAY KUMAR S -->
-  <text x="600" y="202" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif" font-size="74" font-weight="900" text-anchor="middle" fill="#ffffff" letter-spacing="1.5">
-    AJAY <tspan fill="url(#nameGrad)">KUMAR S</tspan>
+  <!-- Main Name: AJAY KUMAR S (Clean, Steady Contrast — No Color Shifts) -->
+  <text x="600" y="202" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif" font-size="74" font-weight="900" text-anchor="middle" fill="#ffffff" letter-spacing="1.5">
+    AJAY <tspan fill="#38bdf8">KUMAR S</tspan>
   </text>
 
-  <!-- Core Engineering Tags (NO "Open to Opportunities") -->
-  <text x="600" y="248" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif" font-size="14.5" fill="#cbd5e1" text-anchor="middle" font-weight="500" letter-spacing="0.8">
+  <!-- Core Engineering Tags -->
+  <text x="600" y="248" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14.5" fill="#cbd5e1" text-anchor="middle" font-weight="500" letter-spacing="0.8">
     Information Science &amp; Eng  <tspan fill="#3b82f6">●</tspan>  Full Stack &amp; Distributed Systems  <tspan fill="#3b82f6">●</tspan>  DSA in Java  <tspan fill="#3b82f6">●</tspan>  AI &amp; Cloud
   </text>
 
@@ -206,20 +202,27 @@
       <rect x="0" y="2" width="13" height="9" rx="1.5" fill="none" stroke="#60a5fa" stroke-width="1"/>
       <path d="M0.5 2.5 L6.5 7 L12.5 2.5" fill="none" stroke="#60a5fa" stroke-width="1"/>
     </g>
-    <text x="5" y="4" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, monospace" font-size="12" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">akumar23755@gmail.com</text>
+    <text x="5" y="4" font-family="'Segoe UI', -apple-system, monospace" font-size="12" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">akumar23755@gmail.com</text>
   </g>
 
-  <!-- Interactive / Live Terminal Typing Simulation -->
+  <!-- Interactive Terminal Prompt Simulation -->
   <g transform="translate(600, 335)">
     <text x="0" y="0" font-family="'Courier New', 'Consolas', monospace" font-size="13" fill="#60a5fa" text-anchor="middle" font-weight="500">
       &gt; git commit -m "feat: scale distributed architectures &amp; AI workflows"
       <tspan fill="#38bdf8">
         _
-        <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0" dur="0.9s" repeatCount="indefinite"/>
       </tspan>
     </text>
   </g>
 
-  <!-- Dynamic Bottom Accent Line with Wave Shimmer -->
-  <rect x="0" y="394" width="1200" height="3.5" fill="url(#accentLine)"/>
+  <!-- Traveling Laser Beam along Bottom Border (Real Physical Beam) -->
+  <rect x="0" y="394" width="1200" height="3" fill="url(#steadyLine)"/>
+  <line y1="395" y2="395" stroke="#67e8f9" stroke-width="2.5" stroke-linecap="round" filter="url(#glow)">
+    <animate attributeName="x1" values="-180;1200" dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="0;1380" dur="3.5s" repeatCount="indefinite"/>
+  </line>
+  <circle cy="395" r="3.5" fill="#ffffff" filter="url(#glow)">
+    <animate attributeName="cx" values="0;1380" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
 </svg>

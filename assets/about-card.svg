@@ -1,55 +1,34 @@
 <svg width="1140" height="340" viewBox="0 0 1140 340" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Card Background Gradient -->
+    <!-- Steady Dark Background Gradient -->
     <linearGradient id="termBg" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#0b172a"/>
       <stop offset="100%" stop-color="#070f1e"/>
     </linearGradient>
 
-    <!-- Outer Border Glow -->
-    <linearGradient id="borderGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.6"/>
-      <stop offset="50%" stop-color="#1d4ed8" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.5"/>
-    </linearGradient>
-
-    <!-- Animated Progress Bar Gradient 1 -->
-    <linearGradient id="barGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#2563eb"/>
-      <stop offset="70%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#93c5fd"/>
-      <animateTransform attributeName="gradientTransform" type="translate" from="-200 0" to="200 0" dur="3s" repeatCount="indefinite"/>
-    </linearGradient>
-
-    <!-- Animated Progress Bar Gradient 2 -->
-    <linearGradient id="barGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#3b82f6"/>
-      <stop offset="70%" stop-color="#60a5fa"/>
-      <stop offset="100%" stop-color="#a5b4fc"/>
-      <animateTransform attributeName="gradientTransform" type="translate" from="-200 0" to="200 0" dur="3.5s" repeatCount="indefinite"/>
-    </linearGradient>
-
-    <!-- Laser Scan Beam -->
-    <linearGradient id="scanBeam" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
-      <animateTransform attributeName="gradientTransform" type="translate" from="-500 0" to="500 0" dur="4s" repeatCount="indefinite"/>
+    <!-- Steady Solid Progress Bar Gradient -->
+    <linearGradient id="solidBarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="60%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
     </linearGradient>
 
     <pattern id="termGrid" width="20" height="20" patternUnits="userSpaceOnUse">
       <circle cx="10" cy="10" r="0.5" fill="#3b82f6" opacity="0.06"/>
     </pattern>
+
+    <filter id="termGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
   </defs>
 
   <!-- Base Card -->
   <rect width="1140" height="340" rx="14" fill="url(#termBg)"/>
   <rect width="1140" height="340" rx="14" fill="url(#termGrid)"/>
 
-  <!-- Glowing Animated Border -->
-  <rect x="1" y="1" width="1138" height="338" rx="13" fill="none" stroke="url(#borderGlow)" stroke-width="1.4">
-    <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="4s" repeatCount="indefinite"/>
-  </rect>
+  <!-- Border -->
+  <rect x="1" y="1" width="1138" height="338" rx="13" fill="none" stroke="#1e3a5f" stroke-width="1.2"/>
 
   <!-- Top Terminal Title Bar -->
   <rect x="1" y="1" width="1138" height="38" rx="13" fill="#0f1f38" opacity="0.9"/>
@@ -73,10 +52,7 @@
     <text x="0" y="3.5" font-family="'Segoe UI', sans-serif" font-size="10" fill="#34d399" font-weight="700" letter-spacing="1">ONLINE</text>
   </g>
 
-  <!-- Scan Beam across Window Divider -->
-  <rect x="1" y="38" width="1138" height="1.5" fill="url(#scanBeam)"/>
-
-  <!-- ════════════ LEFT COLUMN: DEVELOPER CLI SPECIFICATION (Width: 540) ════════════ -->
+  <!-- ════════════ LEFT COLUMN: DEVELOPER CLI SPECIFICATION (Width: 530) ════════════ -->
   <g transform="translate(24, 56)">
     <!-- Code Editor Box -->
     <rect width="530" height="262" rx="8" fill="#081326" stroke="#1a2d4c" stroke-width="1"/>
@@ -84,7 +60,13 @@
     <!-- Left Accent Bar -->
     <rect x="0" y="10" width="3" height="242" rx="1.5" fill="#3b82f6" opacity="0.8"/>
 
-    <!-- Line Numbers & Code Lines using inline tspans for seamless flow -->
+    <!-- Active CRT Scanner Laser Beam Sweeping Vertically -->
+    <line x1="4" y1="0" x2="526" y2="0" stroke="#38bdf8" stroke-width="1" opacity="0.35" filter="url(#termGlow)">
+      <animate attributeName="y1" values="10;250;10" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="10;250;10" dur="6s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- Line Numbers & Code Lines using inline tspans -->
     <g font-family="'Courier New', 'Consolas', monospace" font-size="12">
       <!-- Line 1 -->
       <text x="18" y="30" fill="#475569">01</text>
@@ -136,7 +118,7 @@
     </g>
   </g>
 
-  <!-- ════════════ RIGHT COLUMN: SYSTEMS & ARCHITECTURE GAUGES (Width: 540) ════════════ -->
+  <!-- ════════════ RIGHT COLUMN: SYSTEMS & ARCHITECTURE GAUGES (Width: 538) ════════════ -->
   <g transform="translate(578, 56)">
     <!-- Container Box -->
     <rect width="538" height="262" rx="8" fill="#081326" stroke="#1a2d4c" stroke-width="1"/>
@@ -145,30 +127,43 @@
     <text x="24" y="28" font-family="'Segoe UI', sans-serif" font-size="11" fill="#60a5fa" font-weight="700" letter-spacing="2">
       ENGINEERING HUD &amp; COMPETENCIES
     </text>
+    <!-- Live Telemetry Equalizer Blip on Header Line -->
     <line x1="24" y1="36" x2="514" y2="36" stroke="#1e3a5f" stroke-width="0.8"/>
 
     <!-- Gauge 1: Microservices & Event-Driven (Kafka / RabbitMQ) -->
     <g transform="translate(24, 48)">
       <text x="0" y="14" font-family="'Segoe UI', sans-serif" font-size="12" fill="#e2e8f0" font-weight="600">Distributed Microservices &amp; Event Streaming</text>
       <text x="490" y="14" font-family="'Courier New', monospace" font-size="11.5" fill="#38bdf8" text-anchor="end" font-weight="bold">94%</text>
+      <!-- Track -->
       <rect x="0" y="22" width="490" height="8" rx="4" fill="#0f1f38"/>
-      <rect x="0" y="22" width="460" height="8" rx="4" fill="url(#barGrad1)"/>
+      <!-- Fill -->
+      <rect x="0" y="22" width="460" height="8" rx="4" fill="url(#solidBarGrad)"/>
+      <!-- Photon Energy Pulse Moving Along Conduit -->
+      <circle cy="26" r="3.5" fill="#67e8f9" filter="url(#termGlow)">
+        <animate attributeName="cx" values="10;455;10" dur="3s" repeatCount="indefinite"/>
+      </circle>
     </g>
 
-    <!-- Gauge 2: Backend Architecture (Java Spring Boot, FastAPI, Node) -->
+    <!-- Gauge 2: Core Backend (Spring Boot, FastAPI, Express) -->
     <g transform="translate(24, 92)">
       <text x="0" y="14" font-family="'Segoe UI', sans-serif" font-size="12" fill="#e2e8f0" font-weight="600">Core Backend (Spring Boot, FastAPI, Express)</text>
       <text x="490" y="14" font-family="'Courier New', monospace" font-size="11.5" fill="#60a5fa" text-anchor="end" font-weight="bold">92%</text>
       <rect x="0" y="22" width="490" height="8" rx="4" fill="#0f1f38"/>
-      <rect x="0" y="22" width="450" height="8" rx="4" fill="url(#barGrad2)"/>
+      <rect x="0" y="22" width="450" height="8" rx="4" fill="url(#solidBarGrad)"/>
+      <circle cy="26" r="3.5" fill="#67e8f9" filter="url(#termGlow)">
+        <animate attributeName="cx" values="10;445;10" dur="3.5s" repeatCount="indefinite"/>
+      </circle>
     </g>
 
-    <!-- Gauge 3: Full Stack & Modern Web (Next.js 15, React, TypeScript) -->
+    <!-- Gauge 3: Full Stack & Modern Web (Next.js 15, React, Tailwind) -->
     <g transform="translate(24, 136)">
       <text x="0" y="14" font-family="'Segoe UI', sans-serif" font-size="12" fill="#e2e8f0" font-weight="600">Full Stack &amp; Modern Web (Next.js 15, React, Tailwind)</text>
       <text x="490" y="14" font-family="'Courier New', monospace" font-size="11.5" fill="#38bdf8" text-anchor="end" font-weight="bold">90%</text>
       <rect x="0" y="22" width="490" height="8" rx="4" fill="#0f1f38"/>
-      <rect x="0" y="22" width="440" height="8" rx="4" fill="url(#barGrad1)"/>
+      <rect x="0" y="22" width="440" height="8" rx="4" fill="url(#solidBarGrad)"/>
+      <circle cy="26" r="3.5" fill="#67e8f9" filter="url(#termGlow)">
+        <animate attributeName="cx" values="10;435;10" dur="2.8s" repeatCount="indefinite"/>
+      </circle>
     </g>
 
     <!-- Gauge 4: Cloud, Containers & AI (AWS, GCP, Docker, LangChain) -->
@@ -176,7 +171,10 @@
       <text x="0" y="14" font-family="'Segoe UI', sans-serif" font-size="12" fill="#e2e8f0" font-weight="600">Cloud, Containers &amp; GenAI (Docker, AWS, LangChain)</text>
       <text x="490" y="14" font-family="'Courier New', monospace" font-size="11.5" fill="#60a5fa" text-anchor="end" font-weight="bold">86%</text>
       <rect x="0" y="22" width="490" height="8" rx="4" fill="#0f1f38"/>
-      <rect x="0" y="22" width="420" height="8" rx="4" fill="url(#barGrad2)"/>
+      <rect x="0" y="22" width="420" height="8" rx="4" fill="url(#solidBarGrad)"/>
+      <circle cy="26" r="3.5" fill="#67e8f9" filter="url(#termGlow)">
+        <animate attributeName="cx" values="10;415;10" dur="3.2s" repeatCount="indefinite"/>
+      </circle>
     </g>
 
     <!-- Bottom Activity Metric Badges -->

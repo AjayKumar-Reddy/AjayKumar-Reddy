@@ -41,15 +41,17 @@
 <img src="./assets/connect-header.svg" width="70%" alt="Connect &amp; Collaborate">
 </div>
 
-<p align="center">
-  <a href="mailto:akumar23755@gmail.com"><img src="https://img.shields.io/badge/Email-akumar23755%40gmail.com-0a1628?style=for-the-badge&logo=gmail&logoColor=60a5fa&labelColor=0d1f3c&color=1e3a5f" alt="Email"/></a>
-  &nbsp;&nbsp;
-  <a href="https://www.linkedin.com/in/ajay-kumar-reddy7411/"><img src="https://img.shields.io/badge/LinkedIn-Ajay_Kumar-0a1628?style=for-the-badge&logo=linkedin&logoColor=60a5fa&labelColor=0d1f3c&color=1e3a5f" alt="LinkedIn"/></a>
-  &nbsp;&nbsp;
-  <a href="https://fun-ai-portfolio.vercel.app"><img src="https://img.shields.io/badge/Portfolio-Visit_Site-0a1628?style=for-the-badge&logo=vercel&logoColor=60a5fa&labelColor=0d1f3c&color=1e3a5f" alt="Portfolio"/></a>
-</p>
-
 <br>
+
+<div align="center">
+  <a href="mailto:akumar23755@gmail.com"><img src="./assets/btn-email.svg" width="31%" alt="Direct Email"></a>
+  &nbsp;
+  <a href="https://www.linkedin.com/in/ajay-kumar-reddy7411/"><img src="./assets/btn-linkedin.svg" width="31%" alt="LinkedIn Profile"></a>
+  &nbsp;
+  <a href="https://fun-ai-portfolio.vercel.app"><img src="./assets/btn-portfolio.svg" width="31%" alt="Live Portfolio"></a>
+</div>
+
+<br><br>
 
 <div align="center">
 <img src="./assets/footer.svg" width="100%" alt="Footer">
